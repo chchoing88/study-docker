@@ -10,5 +10,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && echo "daemon off;" >> /etc/nginx/nginx.conf
 
-EXPOSE 80
+EXPOSE 3333
 CMD ["nginx"]

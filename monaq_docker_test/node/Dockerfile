@@ -6,7 +6,7 @@ MAINTAINER monica.kwon
 # install nodemon
 RUN npm install -g nodemon
 
-EXPOSE 8080
+EXPOSE 3333
 
 WORKDIR /data/app_node
 
