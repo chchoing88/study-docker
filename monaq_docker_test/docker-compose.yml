@@ -1,0 +1,27 @@
+version: "2"
+services:
+  ubuntu:
+    container_name: ubuntu_container
+    image: spillover427/ubuntu:blog-latest
+    depends_on:
+      - nginx
+  nginx:
+    container_name: nginx_container
+    image: spillover427/nginx:blog-latest
+    volumes:
+      - ./:/app
+    depends_on:
+      - mongo
+    ports:
+      - "3333:3333"
+    environment:
+      - NGINX_PORT=30
+    links:
+      - mongo
+  mongo:
+    image: spillover427/mongo:blog-latest
+    container_name: mongodb_container
+    ports:
+      - 27107:27017
+    volumes:
+       - ./:/data/db
