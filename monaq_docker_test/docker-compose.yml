@@ -10,19 +10,21 @@ services:
       - mongo
     links:
       - web
-    ports:
-        - "3333:80"
   web:
+    build: .
     container_name: node_container
     image: spillover427/node:blog-latest
+    volumes:
+      - ./:/app
     ports:
-        - "3333:3333"
+        - "3333:8080"
     links:
       - mongo
+    command: npm start
   mongo:
     image: spillover427/mongo:blog-latest
     container_name: mongodb_container
     ports:
-      - 27107:27017
+      - 27017:27017
     volumes:
        - ./:/data/db
