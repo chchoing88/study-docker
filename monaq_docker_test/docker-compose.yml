@@ -3,7 +3,7 @@ services:
   nginx:
     container_name: nginx_container
     build: ./nginx
-    image: spillover427/nginx:blog-latest
+    image: nginx:latest
     volumes:
       - ./:/app
     depends_on:
@@ -13,18 +13,18 @@ services:
   web:
     build: .
     container_name: node_container
-    image: spillover427/node:blog-latest
+    image: node:latest
     volumes:
       - ./:/app
     ports:
-        - "3333:8080"
+        - "3001:8080"
     links:
       - mongo
     command: npm start
   mongo:
-    image: spillover427/mongo:blog-latest
+    image: mongo:latest
     container_name: mongodb_container
     ports:
       - 27017:27017
     volumes:
-       - ./:/data/db
+      - ./:/data/db
