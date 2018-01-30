@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  app_blue:
+    image: blog_express:v1
+    depends_on:
+      - nginx-proxy
+    working_dir: /app/
+    ports:
+      - 8888:3000
+    environment:
+      - VIRTUAL_HOST=nodeapp.local
+    volumes:
+      - front-volume:/app/front
+      - server-volume:/app/server
+    command: npm start
+  
+  app_green:
+    image: blog_express:v1
+    depends_on:
+      - nginx-proxy
+    environment:
+      - VIRTUAL_HOST=localhost.app
+    volumes:
+      - front-volume:/app/front
+      - server-volume:/app/server
+      
+    command: npm start
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - 8080:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    
+
+volumes:
+  server-volume:
+    driver: local-persist 
+    driver_opts:
+      mountpoint: /home/merlin/blog_project/server # full path 
+  
+  front-volume:
+    driver: local-persist
+    driver_opts:
+      mountpoint: /home/merlin/blog_project/front # full path
+
+
