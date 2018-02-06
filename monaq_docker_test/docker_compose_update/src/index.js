@@ -1,32 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Todo = require('./todo-model');
+const app = express();
+
+const router = require('./router/main')(app);
 
 mongoose.connect('mongodb://mongo/node');
 
-const app = express();
-
 app.use(bodyParser.json())
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 
-app.get('/', function (req, res) {
-  res.send('hello world')
+
+var server = app.listen(3000, function(){
+  console.log("Express server has started on port 3000")
 })
 
-app.get('/todo', function (req, res) {
-  Todo.find()
-    .exec()
-    .then(todos => res.send('hello world'))
-    .catch(err => res.send(err));
-});
-
-app.post('/todo', function (req, res) {
-  const todo = new Todo(req.body);
-  todo.save()
-    .then(() => res.status(201).end())
-    .catch(err => res.status(400).end());
-});
-
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
