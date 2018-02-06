@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM express-prod-i
 
 # 앱 디렉터리 생성
 RUN mkdir -p /usr/src/app
