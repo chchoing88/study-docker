@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
   app_blue:
@@ -11,8 +11,12 @@ services:
     environment:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
-      - front-volume:/app/front
-      - server-volume:/app/server
+      - type: bind
+        source: ./front
+        target: /app/front
+      - type: bind
+        source: ./server
+        target: /app/server
     command: npm start
   
   app_green:
@@ -20,11 +24,14 @@ services:
     depends_on:
       - nginx-proxy
     environment:
-      - VIRTUAL_HOST=localhost.app
+      - VIRTUAL_HOST=nodeapp.local
     volumes:
-      - front-volume:/app/front
-      - server-volume:/app/server
-      
+      - type: bind
+        source: ./front
+        target: /app/front
+      - type: bind
+        source: ./server
+        target: /app/server 
     command: npm start
 
   nginx-proxy:
@@ -34,16 +41,5 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     
-
-volumes:
-  server-volume:
-    driver: local-persist 
-    driver_opts:
-      mountpoint: /home/merlin/blog_project/server # full path 
-  
-  front-volume:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /home/merlin/blog_project/front # full path
 
 
