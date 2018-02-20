@@ -6,19 +6,21 @@ services:
     - "8080:80"
     depends_on:
     - node
-  node:
-    build: .
-    ports:
-    - "3000:3000"
-    volumes:
-    - .:/app
-    depends_on:
-    - mongo
-  mongo:
+  mongodb:
     image: mongo:latest
     ports:
       - "27017:27017"
   mongo-seed:
     build: ./mongo-seed
     links:
-      - mongo
+      - mongodb
+    volumes:
+      - ./mongo_data:/data/db
+  node:
+    build: .
+    ports:
+    - "3000:3000"
+    volumes:
+    - .:/app
+    links:
+    - mongodb
