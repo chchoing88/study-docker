@@ -16,5 +16,9 @@ services:
     - mongo
   mongo:
     image: mongo:latest
-    volumes:
-    - ./mongo-data:/data/db
+    ports:
+      - "27017:27017"
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
