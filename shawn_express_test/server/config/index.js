@@ -1,3 +1,11 @@
+/*
+* 마지막 수정 : shawn.thecool
+*
+* config 는 server.js 에서 사용되는 기본 상수 및 옵션들의 집합 객체입니다
+* 이곳에서 한번에 옵션값을 관리하고 server.js 의 가독성을 올리고, 여러군대에서 값을 끌어다 사용하기 위한 수단으로 생성하였습니다
+*
+* */
+
 const path   = require( 'path' );
 const config = {};
 let viewPath = path.join( __dirname, '..', 'views' );
