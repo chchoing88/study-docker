@@ -1,39 +1,3 @@
-## INTRO
-
-Building a web server with a docker for testing
-
-## USAGE
-
-1. /etc/hosts file modify
-
-```vi
-0.0.0.0   nodeapp.local
-```
-
-2. build express image
-
-```sh
-$ docker build -t blog_express:v1 -f ./dockerfile/Dockerfile_express .
-```
-
-3. download nginx-proxy for load balancing
-
-```sh
-$ docker pull jwilder/nginx-proxy 
-```
-
-4. docker compose up
-
-```sh
-$ docker-compose up app_blue
-```
-
-5. load balancing test
-
-```sh
-$ sh check.sh
-```
-
 ## Server layered architecture
 
 
@@ -103,3 +67,39 @@ util: 분명 사용하기 위해서는 여러가시 유틸함수를 정의하거
 ```
 
 이렇게 까지 이고, 부족한 부분이 있을때는 수정요청 및 첨삭 요청드린다.
+
+## INTRO
+
+Building a web server with a docker for testing
+
+## USAGE
+
+1. /etc/hosts file modify
+
+```vi
+0.0.0.0   nodeapp.local
+```
+
+2. build express image
+
+```sh
+$ docker build -t blog_express:v1 -f ./dockerfile/Dockerfile_express .
+```
+
+3. download nginx-proxy for load balancing
+
+```sh
+$ docker pull jwilder/nginx-proxy 
+```
+
+4. docker compose up
+
+```sh
+$ docker-compose up app_blue
+```
+
+5. load balancing test
+
+```sh
+$ sh check.sh
+```
