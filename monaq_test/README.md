@@ -13,7 +13,7 @@ Building a web server with a docker for testing
 2. build express image
 
 ```sh
-$ docker build -t blog_express:v1 -f ./dockerfile/Dockerfile_express .
+$ docker build -t blog_express:v1 -f ./express/Dockerfile .
 ```
 
 3. download nginx-proxy for load balancing
