@@ -10,8 +10,7 @@ const expressErrorHandler = require( 'express-error-handler' );
 const errorHandler        = expressErrorHandler( config.error_handler );
 const mongoose            = require( 'mongoose' );
 const database            = mongoose.connection;
-const model               = require( './models' );
-const apiUser             = require( './routes/user' );
+const router              = require( './routes' );
 
 
 //데이터베이스 설정
@@ -32,13 +31,7 @@ app.use( express.static( path.join( __dirname, 'public' ) ) );
 app.use( '/static', express.static( path.join( __dirname, 'public' ) ) );
 
 //라우팅 설정
-apiUser(app, model.loadSchema( 'user' ));
-
-// 앱
-app.get( '/', ( req, res ) => {
-	res.render( 'pages/index', { msg: 'hello world' } );
-} );
-
+app.use( '/user', router.load( 'user' ) );
 
 //라우트 에러 페이지 설정
 // app.use( '*', error );
