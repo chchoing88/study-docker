@@ -16,19 +16,13 @@ Building a web server with a docker for testing
 $ docker build -t blog_express:v1 -f ./dockerfile/Dockerfile_express .
 ```
 
-3. download nginx-proxy for load balancing
-
-```sh
-$ docker pull jwilder/nginx-proxy 
-```
-
-4. docker compose up
+3. docker compose up
 
 ```sh
 $ docker-compose up app_blue
 ```
 
-5. load balancing test
+4. load balancing test
 
 ```sh
 $ sh check.sh
