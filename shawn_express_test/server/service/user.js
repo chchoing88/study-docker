@@ -1,17 +1,25 @@
 const model  = require( './../models' );
-const Schema = model.load( 'user' );
+const User   = model.load( 'user' );
 const method = {};
 
-method.showUser = ( req, res ) => {
-	Schema.find( ( err, users ) => err ? res.json( err ) : res.json( users ) );
-};
+method.showUsers = ( res ) =>
+	User.find( ( err, users ) => err ? res.json( err ) : res.json( users ) );
 
-method.insertUser = ( req, res ) => {
-	const user  = new Schema();
+method.showUser = ( req, res ) =>
+	User.find( { name: req.params.username }, ( err, user ) => err ? res.json( err ) : res.json( user ) );
+
+method.createUser = ( req, res ) => {
+	const user  = new User();
 	user.name   = req.body.name;
 	user.age    = req.body.age;
 	user.living = req.body.living;
-	user.save( ( err ) => err ? res.json( err ) : res.json( { status: 200 } ) );
+	return user.save( ( err ) => err ? res.json( err ) : res.json( { status: 200 } ) );
 };
+
+method.updateUser = ( req, res ) =>
+	User.update( { name: req.params.username }, { $set: req.body }, ( err, output ) => err ? res.json( err ) : res.json( output ) );
+
+method.removeUser = ( req, res ) =>
+	User.remove( { name: req.params.username }, ( err, output ) => err ? res.json( err ) : res.json( output ) );
 
 module.exports = method;
