@@ -1,3 +1,14 @@
+
+## INTRO
+
+Building a web server with a docker for testing  
+Building a web server with express for testing
+
+## about Express 
+
+express 서버의 자가 실습을 위해서 docs 디렉토리의 .md 파일들을 참고하세요  
+[문서참조][https://github.kakaocorp.com/FTDev-RnD/study-docker/tree/master/shawn_express_test/server/docs]
+
 ## Server layered architecture
 
 
@@ -30,7 +41,6 @@
 이제 해당하는 부분의 계층이 각각 어떤 부분에 초점을 맞추고 있는지 살펴보자.
 
 ![server_img](server/public/image/img)
-
 
 ```text
 
@@ -68,9 +78,6 @@ util: 분명 사용하기 위해서는 여러가시 유틸함수를 정의하거
 
 이렇게 까지 이고, 부족한 부분이 있을때는 수정요청 및 첨삭 요청드린다.
 
-## INTRO
-
-Building a web server with a docker for testing
 
 ## USAGE
 
