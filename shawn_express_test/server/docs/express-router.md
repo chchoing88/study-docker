@@ -55,7 +55,7 @@ module.exports = route;
 
 ```javascript
 //server/server.js
-const router              = require( './routes' );
+const router = require( './routes' );
 
 //...
 
