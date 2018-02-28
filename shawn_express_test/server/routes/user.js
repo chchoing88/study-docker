@@ -9,7 +9,14 @@ router.use( ( req, res, next ) => {
 	next();
 } );
 
-router.get( '/', method.showUser );
-router.post( '/', method.insertUser );
+router.get( '/', ( req, res ) => method.showUsers( res ) );
+
+router.get( '/:username', ( req, res ) => method.showUser( req, res ) );
+
+router.post( '/', ( req, res ) => method.createUser( req, res ) );
+
+router.put( '/:username', ( req, res ) => method.updateUser( req, res ) );
+
+router.delete( '/:username', ( req, res ) => method.removeUser( req, res ) );
 
 module.exports = router;

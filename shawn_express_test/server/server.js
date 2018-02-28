@@ -1,6 +1,7 @@
 'use strict';
 
 const config              = require( './config' );
+const router              = require( './routes' );
 const express             = require( 'express' );
 const app                 = express();
 const path                = require( 'path' );
@@ -10,7 +11,6 @@ const expressErrorHandler = require( 'express-error-handler' );
 const errorHandler        = expressErrorHandler( config.error_handler );
 const mongoose            = require( 'mongoose' );
 const database            = mongoose.connection;
-const router              = require( './routes' );
 
 
 //데이터베이스 설정
@@ -31,6 +31,7 @@ app.use( express.static( path.join( __dirname, 'public' ) ) );
 app.use( '/static', express.static( path.join( __dirname, 'public' ) ) );
 
 //라우팅 설정
+app.use( '/', router.init() );
 app.use( '/user', router.load( 'user' ) );
 
 //라우트 에러 페이지 설정
