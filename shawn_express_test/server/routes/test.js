@@ -2,7 +2,7 @@ const express = require( 'express' );
 const router  = express.Router();
 
 router.get( '/', ( req, res ) => {
-	res.render( 'pages/index', { msg: 'hello index' } );
+	res.render( 'pages/index', { msg: 'hello test' } );
 } );
 
 module.exports = router;
