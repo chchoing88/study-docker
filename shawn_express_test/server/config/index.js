@@ -32,6 +32,13 @@ config.body_parser = {
 //데이터베이스 설정 ( 경로 )
 config.mongo_db_url = 'mongodb://mongo-db:27017/test';
 
+//세션 설정 ( 옵션값 기입 )
+config.express_session = {
+	secret           : 'ErrorIsTheDisciplineThroughWhichWeAdvance',
+	resave           : true,
+	saveUninitialized: true
+};
+
 //익스프레스 에러핸들러 설정 ( 옵션값 기입 )
 config.error_handler = {
 	static: {

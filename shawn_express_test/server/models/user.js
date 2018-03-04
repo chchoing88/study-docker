@@ -1,7 +1,6 @@
 module.exports = {
-	name           : String,
-	age            : Number,
-	living         : Boolean,
+	userId         : String,
+	userPwd        : String,
 	registered_date: {
 		type   : Date,
 		default: Date.now

@@ -1,8 +1,10 @@
 const user      = require( './user' );
+const test      = require( './test' );
+const login     = require( './login' );
 const express   = require( 'express' );
 const router    = express.Router();
 const route     = {};
-const routerMap = { user };
+const routerMap = { user, test, login };
 
 route.load = ( routerName ) => routerMap[ routerName ];
 
