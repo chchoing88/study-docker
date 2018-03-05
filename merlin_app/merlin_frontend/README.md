@@ -5,7 +5,7 @@
 ## STACK
 
 - webpack 4.0
-- react 
+- react 16.02
 
 ## STURUCTURE
 
@@ -22,4 +22,20 @@
 ├── 
 ├── package.json                    
   
+```
+
+## USAGE
+
+- dev 환경에서 
+
+```sh
+$ npm install
+$ npm start
+```
+
+- build ( 예정 )
+
+```sh
+$ npm install
+$ npm build
 ```
