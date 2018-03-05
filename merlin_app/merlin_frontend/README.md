@@ -1,12 +1,11 @@
 ## INTRO
  
- 기존 돌아가는 서버를 proxy로 바라보고 부분적으로 react를 적용하는 환경을 구축한다.
+ - 기존 돌아가는 서버를 proxy로 바라보고 부분적으로 react를 적용하는 환경을 구축한다.
 
 ## STACK
 
-webpack 4.0
-
-react 
+- webpack 4.0
+- react 
 
 ## STURUCTURE
 
