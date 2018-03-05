@@ -1,5 +1,5 @@
 const express = require( 'express' );
-const service = require( './../service' );
+const service = require( '../service/index' );
 const router  = express.Router();
 const method  = service.load( 'user' );
 

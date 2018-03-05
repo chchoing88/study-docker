@@ -40,7 +40,7 @@ express 서버의 자가 실습을 위해서 docs 디렉토리의 .md 파일들�
 
 이제 해당하는 부분의 계층이 각각 어떤 부분에 초점을 맞추고 있는지 살펴보자.
 
-![server_img](server/public/image/img)
+![server_img](server/V0/public/image/img)
 
 ```text
 

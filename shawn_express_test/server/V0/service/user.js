@@ -1,4 +1,4 @@
-const model  = require( './../models' );
+const model  = require( '../models' );
 const User   = model.load( 'user' );
 const method = {};
 
