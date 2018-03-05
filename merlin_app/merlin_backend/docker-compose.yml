@@ -7,16 +7,11 @@ services:
       - nginx-proxy
       - mongo-db
     working_dir: /app/
-    ports:
-      - 8888:3000
     networks: 
       - dbconnection
     environment:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
-      - type: bind
-        source: ./template
-        target: /app/template
       - type: bind
         source: ./server
         target: /app/server
@@ -34,17 +29,14 @@ services:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
       - type: bind
-        source: ./template
-        target: /app/template
-      - type: bind
         source: ./server
-        target: /app/server 
+        target: /app/server
     command: npm start
 
   nginx-proxy:
     image: jwilder/nginx-proxy
     ports:
-      - 8080:80
+      - 8081:80
     networks: 
       - dbconnection
     volumes:
@@ -52,8 +44,8 @@ services:
   
   mongo-db:
     image: mongo
-    ports:
-      - 9999:27017
+    depends_on:
+      - nginx-proxy
     volumes:
       - db-data:/data/db
     networks: 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "HOST=nodeapp.local node scripts/start.js"
+    "start": "HOST=nodeapp.local node scripts/start.js",
+    "build": ""
   },
   "author": "",
   "license": "ISC",
