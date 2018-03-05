@@ -39,3 +39,7 @@ $ npm start
 $ npm install
 $ npm build
 ```
+
+## Customize dev env setting
+
+- scripts/start.js 에서 수정. ( 주의, 그 외에는 건들지 않도록 한다.)
