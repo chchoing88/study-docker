@@ -1,4 +1,6 @@
-module.exports = ( app ) => {
+const config = {};
+
+config.init = ( app ) => {
 	//서버포트 설정
 	app.set( 'port', 3000 );
 	//서버호스트 설정
@@ -8,3 +10,5 @@ module.exports = ( app ) => {
 	//데이터베이스 설정 ( 경로 )
 	app.set( 'db-url', 'mongodb://mongo-db:27017/test' );
 };
+
+module.exports = config;

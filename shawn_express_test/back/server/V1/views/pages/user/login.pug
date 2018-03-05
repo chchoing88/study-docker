@@ -1,0 +1,29 @@
+extends ../index
+
+append head
+	link(rel="stylesheet" href="/css/user/login.css")
+
+block content
+	.wrap-coll
+		.coll-tit
+			h2(class="cont-tit") Login
+			span(class="cont-sub-tit") Shawn's Dev-Log
+		.coll-cont
+			form(method="post" action="/user/login")
+				fieldset
+					legend(class="screen-out") 로그인 화면
+					.login-email
+						label(class="screen-out" for="userEmail") 이메일
+						span(class="cover-login")
+							input(type="text" name="userEmail" id="userEmail" placeholder="Email")
+					.login-pwd
+						label(class="screen-out" for="userPwd") 비밀번호
+						span(class="cover-login")
+							input(type="password" name="userPwd" id="userPwd" placeholder="Password")
+					.login-submit
+						button(class="btn-submit") 로그인
+					.login-links
+						a(href="/user/signup" class="link-signup") 회원가입
+						a(href="/user/forget" class="link-forget") 비밀번호를 잊으셨나요?
+
+

@@ -8,8 +8,8 @@ input,select,textarea,button{border-radius:0;vertical-align:middle}
 input::-ms-clear{display:none}
 button{border:0 none;background-color:transparent;cursor:pointer}
 body{background:#fff;direction:ltr;-webkit-text-size-adjust:none}
-body,th,td,input,select,textarea,button{font-size:13px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;letter-spacing:-1px}
+body,th,td,input,select,textarea,button,code{font-size:14px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;letter-spacing:-1px}
 a{color:#222;text-decoration:none}
-a:hover{color:#118eff;text-decoration:underline}
+a:hover{color:#efc300;text-decoration:underline}
 a:active{background-color:transparent}
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}

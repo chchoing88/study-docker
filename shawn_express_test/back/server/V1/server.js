@@ -1,18 +1,23 @@
 'use strict';
 
-const setup      = require( './V1/config' );
-const router     = require( './V1/routes' );
-const express    = require( 'express' );
-const app        = express();
-const mongoose   = require( 'mongoose' );
-const database   = mongoose.connection;
-const path       = require( 'path' );
-const publicPath = path.join( __dirname, 'V1', 'public' );
-const viewPath   = path.join( __dirname, 'V1', 'views' );
-const bodyParser = require( 'body-parser' );
+const config           = require( './config' );
+const router           = require( './routes' );
+const express          = require( 'express' );
+const app              = express();
+const mongoose         = require( 'mongoose' );
+const database         = mongoose.connection;
+const path             = require( 'path' );
+const publicPath       = path.join( __dirname, 'public' );
+const viewPath         = path.join( __dirname, 'views' );
+const bodyParser       = require( 'body-parser' );
+const passport         = require( 'passport' );
+const passportStrategy = require( 'passport-local' );
+const localStrategy    = passportStrategy.Strategy;
+const flash            = require( 'connect-flash' );
+
 
 // 설정 셋업
-setup( app );
+config.init( app );
 
 // 데이터베이스 설정
 database.on( 'error', console.error );
@@ -26,6 +31,11 @@ mongoose.connect( app.get( 'db-url' ) );
 app.set( 'views', viewPath );
 app.set( 'view engine', 'pug' );
 
+// 패스포트 설정
+app.use( passport.initialize() );
+app.use( passport.session() );
+app.use( flash() );
+
 
 // 미들웨어 설정
 app.use( bodyParser.json() ); // for parsing application/json
@@ -38,8 +48,8 @@ app.use( '/', router.init() );
 app.use( '/user', router.load( 'user' ) );
 
 // 라우트 에러 페이지 설정
-app.use( '*', (req,res)=>{
-	res.render('pages/index',{msg:'보여드리고 싶은게 있었는데 지금은 찾을 수 없네요, 잠시 후 다시 시도해 주세요.'});
+app.use( '*', ( req, res ) => {
+	res.render( 'pages/index', { msg: '404' } );
 } );
 
 // 서버 설정

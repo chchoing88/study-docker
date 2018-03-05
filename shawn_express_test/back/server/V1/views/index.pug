@@ -19,23 +19,39 @@ block head
 
 //- 상속받은 레이아웃의 header 블록과 치환합니다.
 block header
-	#s-header 헤더 영역
+	#s-header
+		h1(class="cover-logo")
+			a(href="javascript:;" class="link-logo") Shawn's De
+				span(class="inner") v-Log
+		ul(class="list-status")
+			li
+				a(href="javascript:;" class="link-info")
+					span(class="screen-out") 유저정보
+					span shawn@theool.com
+			li
+				a(href="javascript:;" class="link-status")
+					span(class="screen-out") 로그인 상태
+					span 로그아웃
+			li
+				a(href="javascript:;" class="link-alarm")
+					span(class="screen-out") 알림
+					span 알림 ( 2 )
+			li
+				a(href="javascript:;" class="link-img")
+					span(class="screen-out") 프로필
+					span 프로필
 
 //- 상속받은 레이아웃의 nav 블록과 치환합니다.
 
 block nav
-	#s-nav 네비 영역
-
-//- 상속받은 레이아웃의 aside 블록과 치환합니다.
-block aside
-	#s-aside 사이드 영역
+	#s-nav
 
 //- 상속받은 레이아웃의 section 블록과 치환합니다.
 block section
-	#s-section 섹션 영역
+	#s-section
 		#s-content
 			block content
 
 //- 상속받은 레이아웃의 footer 블록과 치환합니다.
 block footer
-	#s-footer 풋터 영역
+	#s-footer

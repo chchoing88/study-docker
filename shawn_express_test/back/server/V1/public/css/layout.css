@@ -1,0 +1,17 @@
+#s-wrapper{}
+
+#s-header{overflow:hidden;position:relative;background-color:#454545}
+#s-header .cover-logo{float:left;width:120px;margin:10px;padding:10px;border:4px solid gold;text-align:center;line-height:1}
+#s-header .link-logo{display:block;font-weight:400;color:#fff}
+#s-header .link-logo:hover{text-decoration:none}
+#s-header .link-logo .inner{font-weight:800;color:gold}
+#s-header .list-status{position:absolute;right:10px;bottom:10px;color:#fff}
+#s-header .list-status li{float:left}
+#s-header .list-status li > a{font-size:16px;color:#fff}
+#s-header .list-status li:first-child > a:before{padding:0;content:''}
+#s-header .list-status li > a:before{padding:0 8px;font-weight:800;color:gold;content:'|'}
+
+#s-nav{height:40px;background-color:gainsboro}
+#s-main{background-color:lavender}
+#s-section{background-color:white}
+#s-footer{height:100px;background-color:#efefef}

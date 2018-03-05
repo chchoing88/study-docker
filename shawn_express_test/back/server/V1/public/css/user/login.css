@@ -1,0 +1,15 @@
+.wrap-coll{width:280px;margin:30px auto;padding:0 5px}
+.coll-tit{padding:5px 0;text-align:center}
+.cont-sub-tit{color:#a3a3a3}
+.coll-cont{padding:5px 0;}
+.cover-login{display:block;height:34px;border-bottom:1px solid #999}
+.coll-cont .cover-login input{height:100%;width:100%;border:none;text-indent:10px}
+.coll-cont .cover-login input::-webkit-input-placeholder{color:#a3a3a3}
+.coll-cont .cover-login input:-moz-placeholder{color:#a3a3a3}
+.coll-cont .cover-login input::-moz-placeholder{color:#a3a3a3}
+.coll-cont .cover-login input:-ms-input-placeholder{color:#a3a3a3}
+.btn-submit{height:36px;width:100%;margin-top:18px;font-weight:bolder;background-color:#454545;color:#fff}
+.login-links{margin-top:10px;text-align:center}
+.link-signup{text-decoration:underline}
+.link-signup:after{padding:0 8px;font-weight:800;color:gold;content:'|'}
+.link-forget{text-decoration:underline;color:#a3a3a3}
