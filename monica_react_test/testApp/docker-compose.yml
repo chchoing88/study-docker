@@ -19,7 +19,7 @@ services:
         target: /app/src
       - type: bind
         source: ./server
-        target: /app/server
+        target: /server
     command: npm start
   
   app_green:
@@ -38,7 +38,7 @@ services:
         target: /app/src
       - type: bind
         source: ./server
-        target: /app/server 
+        target: /server
     command: npm start
 
   nginx-proxy:
