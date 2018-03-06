@@ -1,0 +1,9 @@
+.wrap-login{padding:100px 0}
+.cont-login{display:table;width:292px;margin:0 auto}
+.login-info{display:table-cell;vertical-align:top;width:200px}
+.login-info .info-id{margin-bottom:4px}
+.login-info label{float:left;width:50px;margin-top:4px;text-align:center}
+.login-info input{width:100%;box-sizing:border-box}
+.login-submit{display:table-cell;position:relative;vertical-align:top}
+.btn-submit{position:absolute;top:0;bottom:0;width:100%;background-color:#118EFF;color:aliceblue}
+.login-comp{display:block;overflow:hidden;margin-right:4px}

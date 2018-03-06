@@ -1,0 +1,22 @@
+extends ../layouts/index
+
+append head
+	link(rel="stylesheet" href="/css/login/login.css")
+
+block content
+	.wrap-login
+		form(method="post" action="/auth/login")
+			fieldset
+				legend(class="screen-out")  로그인
+				.cont-login
+					.login-info
+						.info-id
+							label(for="userId") 아이디
+							span(class="login-comp")
+								input(type="text" name="userId" id="userId")
+						.info-pwd
+							label(for="userPwd") 비밀번호
+							span(class="login-comp")
+								input(type="password" name="userPwd" id="userPwd")
+					.login-submit
+						button(class="btn-submit" type="submit") 가입하기

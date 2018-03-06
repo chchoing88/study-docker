@@ -1,0 +1,7 @@
+#s-wrapper{margin:0 14px}
+#s-header{height:100px;background-color:gold}
+#s-nav{height:40px;background-color:gainsboro}
+#s-main{overflow:hidden;background-color:lavender}
+#s-aside{float:right;height:300px;width:30%;background-color:beige}
+#s-section{float:left;height:300px;width:70%;background-color:white}
+#s-footer{height:100px;background-color:aliceblue}
