@@ -35,6 +35,22 @@ app.set( 'view engine', 'pug' );
 app.use( passport.initialize() );
 app.use( passport.session() );
 app.use( flash() );
+const authenticationName   = {
+	userEmailField: 'userEmail',
+	userPwdField  : 'userPwd'
+};
+const authenticationMethod = ( req, userEmail, userPwd, done ) => {
+	console.log('passport local-login called');
+	const db = app.get('database');
+	db.userModel.findOne({'userEmail':userEmail},(err, user)=>{
+		if(err){
+			return done(err);
+		}
+		
+		console.log(user);
+	})
+};
+passport.use( 'local-login', new localStrategy( authenticationName, authenticationMethod ) );
 
 
 // 미들웨어 설정
