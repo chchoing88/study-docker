@@ -6,7 +6,7 @@ ENV APP_ENV $app_env
 
 RUN mkdir -p /app
 WORKDIR /app
-COPY ./app ./
+COPY ./ ./
 
 RUN npm install
 

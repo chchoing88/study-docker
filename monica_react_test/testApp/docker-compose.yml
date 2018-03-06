@@ -15,7 +15,7 @@ services:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
       - type: bind
-        source: ./app/src
+        source: ./src
         target: /app/src
       - type: bind
         source: ./server
