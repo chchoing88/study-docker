@@ -1,6 +1,8 @@
 const express = require( 'express' );
+const passport = require('passport');
 const router  = express.Router();
-const service = require( '../service/index' );
+
+// const service = require( '../service/index' );
 // const method  = service.load( 'user' );
 
 // 해당 라우팅에서만 작동하는 미들웨어를 등록
@@ -20,7 +22,10 @@ router.get( '/login', ( req, res ) => {
 } );
 
 // 로그인 요청 post
-router.post( '/login',  service.login);
+router.post( '/login',  passport.authenticate('local-login', {
+	successRedirect:'/test',
+	failureRedirect:'/user/login2'
+}));
 
 // 회원가입 화면 조회 get
 router.get( '/signup', ( req, res ) => {
