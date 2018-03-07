@@ -1,7 +1,14 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
+./idea/
+.vscode/
+npm-debug.log*
+build
+package-lock.json
 
 # dependencies
-/node_modules
+node_modules/
+/packages/*/node_modules/
+
 
 # testing
 /coverage

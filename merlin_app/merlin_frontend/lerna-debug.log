@@ -1,0 +1,133 @@
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ], 'reject-cycles': false, rejectCycles: false }
+2 verbose rootPath /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend
+3 info version 2.9.0
+4 silly isInitialized
+5 silly isInitialized true
+6 silly existsSync /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/VERSION
+7 info versioning independent
+8 silly initialize attempt
+9 silly isDetachedHead
+10 silly getCurrentBranch
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag react-web-component@1.0.2
+21 info Comparing with react-web-component@1.0.2.
+22 silly diffSinceIn react-web-component@1.0.2 packages/react-web-component
+23 silly diff merlin_app/merlin_frontend/packages/react-web-component/package.json
+24 silly diffSinceIn react-web-component@1.0.2 packages/vue-web-component
+25 silly diff merlin_app/merlin_frontend/packages/vue-web-component/package.json
+26 verbose updated react-web-component
+27 verbose updated vue-web-component
+28 info Checking for prereleased packages...
+29 silly collectDependents
+30 silly isPackageDependentOf react-web-component react-web-component
+31 silly isPackageDependentOf react-web-component vue-web-component
+32 silly isPackageDependentOf vue-web-component react-web-component
+33 silly isPackageDependentOf vue-web-component vue-web-component
+34 silly collectUpdates
+35 verbose has filtered update react-web-component
+36 verbose has filtered update vue-web-component
+37 silly initialize success
+38 silly execute attempt
+39 silly runScriptSync preversion merlin_frontend
+40 silly runScriptSync preversion react-web-component
+41 silly runScriptSync version react-web-component
+42 silly runScriptSync preversion vue-web-component
+43 silly runScriptSync version vue-web-component
+44 silly runScriptSync version merlin_frontend
+45 silly addFile /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component/package.json
+46 silly addFile /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component/package.json
+47 silly commit Publish
+47 silly commit
+47 silly commit  - react-web-component@1.0.3
+47 silly commit  - vue-web-component@1.0.3
+48 verbose commit [ 'commit',
+48 verbose commit   '--no-verify',
+48 verbose commit   '-F',
+48 verbose commit   '/private/var/folders/_k/y0_mj58d64140n2211j3q_7r0000gn/T/558a8798-1dea-42ad-a202-8ab8204e204c/lerna-commit.txt' ]
+49 silly addTag react-web-component@1.0.3
+50 silly addTag vue-web-component@1.0.3
+51 silly runScriptSync postversion react-web-component
+52 silly runScriptSync postversion vue-web-component
+53 silly runScriptSync postversion merlin_frontend
+54 info publish Publishing packages to npm...
+55 silly existsSync /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component/scripts/prepublish.js
+56 verbose execScript No prepublish script found at /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component/scripts/prepublish.js
+57 silly existsSync /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component/scripts/prepublish.js
+58 verbose execScript No prepublish script found at /Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component/scripts/prepublish.js
+59 verbose publishing react-web-component
+60 silly publishTaggedInDir latest react-web-component
+61 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component' }
+62 verbose publishing vue-web-component
+63 silly publishTaggedInDir latest vue-web-component
+64 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component' }
+65 error publish Retrying failed publish: react-web-component
+66 verbose publish error undefined
+67 verbose publishing react-web-component
+68 silly publishTaggedInDir latest react-web-component
+69 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component' }
+70 error publish Retrying failed publish: vue-web-component
+71 verbose publish error undefined
+72 verbose publishing vue-web-component
+73 silly publishTaggedInDir latest vue-web-component
+74 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component' }
+75 error publish Retrying failed publish: react-web-component
+76 verbose publish error undefined
+77 verbose publishing react-web-component
+78 silly publishTaggedInDir latest react-web-component
+79 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component' }
+80 error publish Retrying failed publish: vue-web-component
+81 verbose publish error undefined
+82 verbose publishing vue-web-component
+83 silly publishTaggedInDir latest vue-web-component
+84 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component' }
+85 error publish Retrying failed publish: react-web-component
+86 verbose publish error undefined
+87 verbose publishing react-web-component
+88 silly publishTaggedInDir latest react-web-component
+89 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component' }
+90 error publish Retrying failed publish: vue-web-component
+91 verbose publish error undefined
+92 verbose publishing vue-web-component
+93 silly publishTaggedInDir latest vue-web-component
+94 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component' }
+95 error publish Retrying failed publish: react-web-component
+96 verbose publish error undefined
+97 verbose publishing react-web-component
+98 silly publishTaggedInDir latest react-web-component
+99 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/react-web-component' }
+100 error publish Retrying failed publish: vue-web-component
+101 verbose publish error undefined
+102 verbose publishing vue-web-component
+103 silly publishTaggedInDir latest vue-web-component
+104 silly getExecOpts { cwd: '/Users/merlin.ho/Documents/workspace/study-docker/merlin_app/merlin_frontend/packages/vue-web-component' }
+105 error publish Ran out of retries while publishing vue-web-component Error: Command failed: npm publish --tag latest
+105 error publish npm ERR! code ENEEDAUTH
+105 error publish npm ERR! need auth auth required for publishing
+105 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+105 error publish
+105 error publish npm ERR! A complete log of this run can be found in:
+105 error publish npm ERR!     /Users/merlin.ho/.npm/_logs/2018-03-06T10_11_27_458Z-debug.log
+105 error publish
+105 error publish     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+105 error publish     at <anonymous>
+105 error publish     at process._tickCallback (internal/process/next_tick.js:160:7)
+106 error execute callback with error
+107 error Error: Command failed: npm publish --tag latest
+107 error npm ERR! code ENEEDAUTH
+107 error npm ERR! need auth auth required for publishing
+107 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+107 error
+107 error npm ERR! A complete log of this run can be found in:
+107 error npm ERR!     /Users/merlin.ho/.npm/_logs/2018-03-06T10_11_27_458Z-debug.log
+107 error
+107 error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+107 error     at <anonymous>

@@ -4,7 +4,9 @@
     "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -13,13 +15,10 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "rules": {
-    "indent": [
-      "error",
-      "tab"
-    ],
     "linebreak-style": [
       "error",
       "unix"
@@ -28,41 +27,7 @@
       "error",
       "double"
     ],
-    "semi": [
-      "error",
-      "never"
-    ],
-    "default-case": 2,
-    "no-caller": 2,
-    "no-eval": 2,
-    "no-implied-eval": 2,
-    "yoda": 2,
-    "no-multi-spaces": 2,
-    "array-bracket-spacing": 2,
-    "block-spacing": 2,
-    "brace-style": 2,
-    "no-case-declarations": 0,
-    "no-fallthrough": 0,
-    "no-magic-numbers": [
-      1,
-      {
-        "ignoreArrayIndexes": true,
-        "detectObjects": true
-      }
-    ],
-    "guard-for-in": 1,
-    "eqeqeq": 1,
-    "curly": 1,
-    "no-implicit-globals": 1,
-    "no-console": 1,
-    "no-redeclare": 1,
-    "no-unused-vars": 1,
-    "func-style": [
-      1,
-      "declaration",
-      {
-        "allowArrowFunctions": true
-      }
-    ]
+    "prettier/prettier": "error",
+    "no-case-declarations": "error"
   }
 }
