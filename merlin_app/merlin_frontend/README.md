@@ -49,6 +49,19 @@ $ lerna publish
 
 ## npm 생략 ( 대신 git 에도 올라가지 않음 )
 $ lerna publish --skip-npm 
+
+## 이렇게 publish 하면 package.json 의 버전이 업데이트가 되고 
+## 그에 관련된 의존성있던 모듈들의 package.json의 devDependency 나 dependency의 해당 모듈의 버젼도 업데이트 시켜준다.
 ```
 
 - 자세한건 lerna 공식 홈페이지 참조.
+
+
+## 사용법
+
+```javascript
+"scripts": {
+    "postinstall": "lerna bootstrap",
+    "publish": "lerna publish --skip-npm && git pull origin master && git push origin master"
+  },
+```
