@@ -4,6 +4,7 @@
 npm-debug.log*
 build
 package-lock.json
+lerna-debug.log
 
 # dependencies
 node_modules/

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "lerna bootstrap",
-    "publish": "lerna publish --skip-npm && git push origin master"
+    "publish": "lerna publish --skip-npm && git pull origin master && git push origin master"
   },
   "repository": {
     "type": "git",
