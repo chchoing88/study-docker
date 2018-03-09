@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   entry: ["./src/index.js"],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("dist"),
     filename: "bundle.js"
   },
   module: {
@@ -17,7 +17,7 @@ module.exports = {
       }
     ]
   },
-  mode: "development",
+  mode: "production",
   plugins: [],
   resolve: {
     modules: ["node_modules"]
