@@ -15,7 +15,7 @@ services:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
       - type: bind
-        source: ./server
+        source: ./
         target: /app/server
     command: npm start
 
@@ -31,7 +31,7 @@ services:
       - VIRTUAL_HOST=nodeapp.local
     volumes:
       - type: bind
-        source: ./server
+        source: ./
         target: /app/server
     command: npm start
 
