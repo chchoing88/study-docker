@@ -1,27 +1,23 @@
 'use strict';
-
-const config           = require( './config' );
-const router           = require( './routes' );
-const express          = require( 'express' );
-const app              = express();
-const mongoose         = require( 'mongoose' );
-const database         = mongoose.connection;
-const path             = require( 'path' );
-const publicPath       = path.join( __dirname, 'public' );
-const viewPath         = path.join( __dirname, 'views' );
-const bodyParser       = require( 'body-parser' );
-const passport         = require( 'passport' );
-const passportStrategy = require( 'passport-local' );
-const localStrategy    = passportStrategy.Strategy;
-const flash            = require( 'connect-flash' );
-
+const config     = require( './config' );
+const router     = require( './routes' );
+const express    = require( 'express' );
+const app        = express();
+const mongoose   = require( 'mongoose' );
+const db         = mongoose.connection;
+const path       = require( 'path' );
+const publicPath = path.join( __dirname, 'public' );
+const viewPath   = path.join( __dirname, 'views' );
+const bodyParser = require( 'body-parser' );
+const passport   = require( 'passport' );
+const session    = require( 'express-session' );
 
 // 설정 셋업
-config.init( app );
+config.init( app ); // 엡 구동을 위한 설정 값 및 함수들 기입 app.set 으로 등록 후 app.get 으로 사용
 
 // 데이터베이스 설정
-database.on( 'error', console.error );
-database.once( 'open', () => console.log( 'Connected to mongo server' ) );
+db.on( 'error', console.error );
+db.once( 'open', () => console.log( 'Connected to mongo server' ) );
 mongoose.connect( app.get( 'db-url' ) );
 
 // 뷰 엔진 설정 - pug ( jade )
@@ -31,33 +27,28 @@ mongoose.connect( app.get( 'db-url' ) );
 app.set( 'views', viewPath );
 app.set( 'view engine', 'pug' );
 
+// 세션 설정
+app.use( session( {
+										secret           : 'my key',
+										resave           : true,
+										saveUninitialized: true
+									} ) );
 // 패스포트 설정
-app.use( passport.initialize() );
-app.use( passport.session() );
-app.use( flash() );
-const authenticationName   = {
-	userEmailField: 'userEmail',
-	userPwdField  : 'userPwd'
-};
-const authenticationMethod = ( req, userEmail, userPwd, done ) => {
-	console.log('passport local-login called');
-	const db = app.get('database');
-	db.userModel.findOne({'userEmail':userEmail},(err, user)=>{
-		if(err){
-			return done(err);
-		}
-		
-		console.log(user);
-	})
-};
-passport.use( 'local-login', new localStrategy( authenticationName, authenticationMethod ) );
-
+app.use( passport.initialize() ); // passport 구동
+app.use( passport.session() ); // 세션 연결
+app.get( 'passport-config' )(); // config.passport.js 참조
 
 // 미들웨어 설정
 app.use( bodyParser.json() ); // for parsing application/json
 app.use( bodyParser.urlencoded( app.get( 'body-parser' ) ) ); // for parsing application x-www-form-urlencoded
 app.use( express.static( publicPath ) );
 app.use( '/public', express.static( publicPath ) );
+
+// 로그인 여부 확인 미들웨어
+app.use((req,res,next)=>{
+	console.log('isAuthenticated ? ',req.isAuthenticated());
+	next();
+});
 
 // 라우팅 설정
 app.use( '/', router.init() );

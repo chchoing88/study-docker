@@ -1,45 +1,67 @@
-## INTRO
- 
- - 기존 돌아가는 서버를 proxy로 바라보고 부분적으로 react를 적용하는 환경을 구축한다.
+## 목표
 
-## STACK
+- frontEnd 프로젝트 환경 구축
 
-- webpack 4.0
-- react 16.02
+## 기술스택
 
-## STURUCTURE
+- lerna ( monorepo ) : 프로젝트 관리 tool
+- eslint 
+- prettier : eslint rules set을 prettier로 따른다.
 
-```
-├── config
-│   ├── webpack.dev.config.js       ## 웹팩 dev config
-│   ├── wepackDevServer.js          ## 웹팩 dev server용 config
-├── scripts                         ## frontend 개발서버 , build , 배포 쪽 스크립트
-│   ├── start.js                    ## 개발서버 start 
-├── src                             ## react 소스 폴더
-│   ├── components                  ## components 들 모음 폴더
-│   ├── App.js                      ## app 의 시작점
-│   ├── index.js                    ## react render의 시작점
-├── 
-├── package.json                    
-  
-```
 
-## USAGE
+## 설명
 
-- dev 환경에서 
+- monorepo 를 이용하여 여러 npm 모듈들을 한꺼번에 관리한다.
+- monorepo 와 eslint 로 써서 모듈들의 코드 일관성을 유지. 
+- 쉽게는 packages 폴더 안 폴더 하나하나가 npm 모듈들이라고 생각하고 각자의 레퍼지토리가 따로 있었다고 생각하면 된다. 그것을 한 repo로 관리하는것이 monorepo
+- 이점으로 모듈들의 버전관리 및 코드 일관성을 유지 시킬 수 있다.
+- 단점으로 한 repo의 무게가 무거워 질 수 있다.
 
+
+## lerna 사용법
+
+- lerna 초기화 및 independent 모드로 실행
 ```sh
-$ npm install
-$ npm start
+$ lerna init -i 
 ```
 
-- build ( 예정 )
-
+- 각 패키지 안에 들어있는 모듈의 npm install 을 실행
 ```sh
-$ npm install
-$ npm build
+$ lerna bootstrap
+``` 
+
+- 모듈간의 의존성 추가 
+```sh
+## moduleb 의 package.json에 dependency에 moduleb 추가 
+$ lerna add modulea --scope=moduleb
+
+## moduleb 의 package.json에 devDependency에 moduleb 추가 
+$ lerna add modulea --scope=moduleb --dev
+
+## 모든 모듈 package.json에 devDependency에 moduleb 추가 
+$ lerna add modulea 
+``` 
+
+- 배포 ( git 및 npm )
+```sh
+## git 뿐만 아니라 npmjs 에도 배포 ( npm publish )
+$ lerna publish
+
+## npm 생략 ( 대신 git 에도 올라가지 않음 )
+$ lerna publish --skip-npm 
+
+## 이렇게 publish 하면 package.json 의 버전이 업데이트가 되고 
+## 그에 관련된 의존성있던 모듈들의 package.json의 devDependency 나 dependency의 해당 모듈의 버젼도 업데이트 시켜준다.
 ```
 
-## Customize dev env setting
+- 자세한건 lerna 공식 홈페이지 참조.
 
-- scripts/start.js 에서 수정. ( 주의, 그 외에는 건들지 않도록 한다.)
+
+## 사용법
+
+```javascript
+"scripts": {
+    "postinstall": "lerna bootstrap",
+    "publish": "lerna publish --skip-npm && git pull origin master && git push origin master"
+  },
+```

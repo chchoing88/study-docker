@@ -1,4 +1,5 @@
-const config = {};
+const config   = {};
+const passport = require( './passport' );
 
 config.init = ( app ) => {
 	//서버포트 설정
@@ -9,6 +10,8 @@ config.init = ( app ) => {
 	app.set( 'body-parser', { extended: false } );
 	//데이터베이스 설정 ( 경로 )
 	app.set( 'db-url', 'mongodb://mongo-db:27017/test' );
+	
+	app.set( 'passport-config', passport );
 };
 
 module.exports = config;
