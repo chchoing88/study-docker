@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      dataList: []
+    };
+  }
+  // 이 안에서 다른 Javascript 프레임워크를 연동하거나, setTimeout, setInterval 및 ajax 등을 처리
+  componentDidMount() {
+    this.getApi()
+      .then(res => this.setState({ dataList: res }))
+      .catch(err => console.log(err));
+  }
+
+  getApi= async () => {
+    const response = await fetch('/api/hello');
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
+
   render() {
+    let retdata = this.state.dataList.map((data) => {
+      return data.msg;
+    });
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>Hello This is App</h1>
+        {retdata}
       </div>
     );
   }
