@@ -11,7 +11,7 @@
 
 ```
 ├── config
-│   ├── paths                       ## 경로 설정
+│   ├── paths                       ## 경로 설정 ( 각자의 경로가 다르다면 여기서 수정)
 │   ├── webpack.dev.config.js       ## 웹팩 prod config
 │   ├── webpack.dev.config.js       ## 웹팩 dev config
 │   ├── wepackDevServer.js          ## 웹팩 dev server용 config
@@ -45,4 +45,4 @@ $ npm build
 
 ## Customize dev env setting
 
-- scripts/start.js 에서 수정. ( 주의, 그 외에는 건들지 않도록 한다.)
+- dev 환경시 scripts/start.js 에서 수정 && 경로는 config/paths.js 에서 수정 ( 주의, 그 외에는 건들지 않도록 한다.)
