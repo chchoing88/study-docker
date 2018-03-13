@@ -11,9 +11,12 @@
 
 ```
 ├── config
+│   ├── paths                       ## 경로 설정 ( 각자의 경로가 다르다면 여기서 수정)
+│   ├── webpack.dev.config.js       ## 웹팩 prod config
 │   ├── webpack.dev.config.js       ## 웹팩 dev config
 │   ├── wepackDevServer.js          ## 웹팩 dev server용 config
 ├── scripts                         ## frontend 개발서버 , build , 배포 쪽 스크립트
+│   ├── build.js                    ## 배포 build 
 │   ├── start.js                    ## 개발서버 start 
 ├── src                             ## react 소스 폴더
 │   ├── components                  ## components 들 모음 폴더
@@ -33,7 +36,7 @@ $ npm install
 $ npm start
 ```
 
-- build ( 예정 )
+- build
 
 ```sh
 $ npm install
@@ -42,4 +45,4 @@ $ npm build
 
 ## Customize dev env setting
 
-- scripts/start.js 에서 수정. ( 주의, 그 외에는 건들지 않도록 한다.)
+- dev 환경시 scripts/start.js 에서 수정 && 경로는 config/paths.js 에서 수정 ( 주의, 그 외에는 건들지 않도록 한다.)

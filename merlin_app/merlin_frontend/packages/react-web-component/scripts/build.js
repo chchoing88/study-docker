@@ -1,4 +1,5 @@
 const path = require("path");
+const paths = require("../config/paths");
 const chalk = require("chalk");
 const fs = require("fs-extra");
 const argv = require("yargs").argv;
@@ -12,7 +13,7 @@ function execute() {
       copyPublicFolder();
     },
     err => {
-      console.log("error");
+      console.log("build error");
     }
   );
 }
@@ -23,32 +24,18 @@ function build() {
   let compiler = webpack(config);
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
-      // console.log("Compiler has finished execution.");
       if (err) {
         return reject(err);
       }
+
       return resolve({ stats });
     });
   });
 }
 
-// function buildCallback(err, stats) {
-//   if (err) {
-//     console.log(err);
-//     return false;
-//   }
-
-//   console.log(stats);
-//   return true;
-// }
-
 // copy folder and file
 function copyPublicFolder() {
-  fs.copySync("/dist/bundle.js", "/dist/copy.js", err => {
-    if (err) return console.log(err);
-
-    console.log(chalk.yellow("success file copy"));
-  });
+  fs.copySync(paths.appPublic, paths.appBuild);
 }
 
 execute();
