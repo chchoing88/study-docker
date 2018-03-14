@@ -1,0 +1,1078 @@
+@charset "utf-8";
+
+
+
+
+/* font */
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:900;
+	src:local('Noto Sans KR Black'), local('NotoSansKR-Black');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Black.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Black.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Black.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Black.otf) format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:700;
+	src:local('Noto Sans KR Bold'), local('NotoSansKR-Bold');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Bold.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Bold.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Bold.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Bold.otf) format('opentype');
+}
+@font-face{
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:500;
+	src:local('Noto Sans KR Medium'), local('NotoSansKR-Medium');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Medium.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Medium.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Medium.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face{
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:400;
+	src:local('Noto Sans KR Regular'), local('NotoSansKR-Regular');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Regular.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Regular.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Regular.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:300;
+	src:local('Noto Sans KR DemiLight'), local('NotoSansKR-DemiLight');
+	src:url(/AI-2017/service/fonts/NotoSansKR-DemiLight.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-DemiLight.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-DemiLight.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-DemiLight.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-DemiLight.otf) format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:200;
+	src:local('Noto Sans KR Light'), local('NotoSansKR-Light');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Light.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Light.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Light.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face{
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:100;
+	src:local('Noto Sans KR Thin'), local('NotoSansKR-Thin');
+	src:url(/AI-2017/service/fonts/NotoSansKR-Thin.eot),
+		url(/AI-2017/service/fonts/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'),
+		url(/AI-2017/service/fonts/NotoSansKR-Thin.woff2) format('woff2'),
+		url(/AI-2017/service/fonts/NotoSansKR-Thin.woff) format('woff'),
+		url(/AI-2017/service/fonts/NotoSansKR-Thin.otf) format('opentype');
+}/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes: none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer;outline:none}
+body{background:#fff;-webkit-font-smoothing:antialiased}
+body{-webkit-text-size-adjust:none} /* 뷰포트 변환시 폰트크기 자동확대 방지. */
+body,th,td,input,select,textarea,button{font-weight:400;font-size:12px;line-height:1.5;font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','돋움',dotum,sans-serif;color:#333}
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:none;-moz-transition:opacity .5s;-webkit-transition:opacity .5s;transition:opacity .5s}
+a:active{background-color:transparent;outline:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+/* global */
+#kakaoIndex{overflow:hidden;position:absolute;left:-9999px;width:0;height:1px;margin:0;padding:0}
+.ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+.ir_wa{display:block;overflow:hidden;position:relative;z-index:-1;width:100%;height:100%}
+.screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+.hide{display:none}
+
+/* Background Image - common 요소 */
+.ico_heykakao{display:block;overflow:hidden;font-size:0;line-height:0;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/ico_heykakao_170917_v2.png) no-repeat;text-indent:-9999px}
+.tit_heykakao{display:block;overflow:hidden;font-size:0;line-height:0;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/tit_heykakao.png) no-repeat;text-indent:-9999px}
+
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	.ir_pm,	.ico_heykakao, .tit_heykakao{font-size:1px;text-indent:0;color:transparent}
+}
+
+html,body{height:100%}
+#kakaoWrap{position:relative;min-width:320px;height:100%}
+#kakaoContent{min-height:100%;margin:0 auto -60px;padding-bottom:60px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bg_dimmed{position:fixed;left:0;right:0;top:0;bottom:0;z-index:5;background:#000;opacity:.75}
+.line_pc{display:block}
+.txt_mobile{display:none} /* 모바일에서만 보이는 텍스트 */
+
+/* head */
+.head_heykakao{position:fixed;left:0;right:0;z-index:10;background:#000}
+.head_heykakao .inner_head{overflow:hidden;max-width:1180px;height:80px;margin:0 auto;padding:0 50px}
+.head_heykakao h1{float:left;padding-top:13px}
+.link_logo{display:block;width:104px;height:39px;padding-top:15px}
+.link_logo:hover{opacity:.8}
+.link_logo .logo_heykakao{width:104px;height:22px;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/logo_gnb.png) no-repeat}
+.head_gnb{float:right;height:80px}
+.list_gnb{overflow:hidden;height:30px;padding-top:25px}
+.list_gnb li{float:left}
+.list_gnb li+li{margin-left:48px}
+.list_gnb .link_gnb{display:block;opacity:.6}
+.list_gnb .ir_wa{z-index:0;font-size:17px;line-height:30px;color:#fff}
+.list_gnb .link_gnb:hover,.list_gnb .link_gnb:focus, .list_gnb .on .link_gnb{opacity:1}
+.head_heykakao .link_fold{display:none}
+.head_heykakao.off{display:none}
+.head_heykakao.on{display:block}
+
+/* footer */
+.foot_heykakao{overflow:hidden;position:relative;height:60px;background-color:rgba(0,0,0,0.3)}
+.foot_heykakao .inner_foot{overflow:hidden;max-width:1180px;margin:0 auto;padding:18px 50px 0;font-size:0;line-height:0}
+.foot_heykakao .info_copyright{display:inline-block;height:26px;vertical-align:top}
+.foot_heykakao .link_kakao{display:block;width:59px;height:100%;padding-top:6px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.foot_heykakao .ico_kakao{height:12px;margin:0 auto;background-position:0 -30px}
+.foot_heykakao .link_help{display:inline-block;position:relative;height:26px;margin-left:19px;padding-left:20px;font-size:14px;line-height:25px;color:#fff;vertical-align:top}
+.foot_heykakao .link_help:before{position:absolute;top:4px;left:0;width:1px;height:16px;background-color:#fff;opacity:.2;content:''}
+.foot_heykakao .link_help:hover,.foot_heykakao .link_help:active,.foot_heykakao .link_help:focus,.foot_heykakao .link_kakao:hover{opacity:.7}
+
+/* popup 공통 */
+.heykakao_layer{position:absolute;top:50%;left:50%;z-index:100}
+.heykakao_layer:after{display:block;clear:both;content:''}
+.inner_heykakao_layer{position:relative}
+.inner_heykakao_layer .btn_close{position:absolute;top:0;right:0;width:72px;height:72px}
+.inner_heykakao_layer .ico_close{width:32px;height:32px;margin:21px auto 0}
+
+/* slick */
+.slick-list{width:100%;height:100%}
+.slick-track{height:100%}
+.slide_pannel{overflow:hidden}
+.paging_comm{position:absolute;left:0;right:0;max-width:1180px;margin:0 auto;padding:0 50px}
+.slick-dots{margin-left:-5px}
+.slick-dots:after{display:block;clear:both;content:''}
+.slick-dots li{float:left}
+.slick-dots .btn_paging{padding:5px}
+.slick-dots .ico_paging{display:block;width:10px;height:10px;margin-top:5px;border:2px solid #fff;border-radius:100%;font-size:0;line-height:0;background:transparent;color:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-indent:-9999px}
+.slick-active .ico_paging{margin-top:0;background:#fff;
+	-webkit-animation-name:aniPage;
+	-webkit-animation-duration:0.5s;
+	-webkit-animation-timing-function:ease-in-out;
+	animation-name:aniPage;
+	animation-duration:0.5s;
+	animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes aniPage{
+	0% {margin-top:5px}
+	100% {margin-top:0}
+}
+@keyframes aniPage{
+	0% {margin-top:5px}
+	100% {margin-top:0}
+}
+.slick-dots .btn_paging:active .ico_paging,
+.slick-dots .btn_paging:hover .ico_paging{background:rgba(255,255,255,0.4);opacity:1;
+	-webkit-animation-name:bgPage;
+	-webkit-animation-duration:0.5s;
+	-webkit-animation-timing-function:ease-in-out;
+	animation-name:bgPage;
+	animation-duration:0.5s;
+	animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes bgPage {
+	0% {background:transparent}
+}
+@keyframes bgPage {
+	0% {background:transparent}
+}
+.slick-active .ico_paging{animation:inherit}
+.btn_slide{position:absolute;z-index:5;top:50%;width:66px;height:66px;margin-top:-33px;opacity:.8}
+.btn_slide:active, .btn_slide:hover{text-decoration:none;opacity:1;-moz-transition:opacity .5s;-webkit-transition:opacity .5s;transition:opacity .5s}
+.btn_slide .ico_heykakao{width:18px;height:31px;margin:0 auto}
+.btn_prev{left:31px}
+.btn_prev .ico_heykakao{background-position:0 -1480px}
+.btn_next{right:31px}
+.btn_next .ico_heykakao{background-position:0 -1520px}
+
+/* PC (해상도 1024px 이하) common */
+@media only screen and (max-width:1024px) {
+	.line_pc{display:inline-block;vertical-align:top}
+	.line_middle{display:block}
+
+	/* head */
+	.head_heykakao .inner_head{height:60px;padding:0 90px}
+	.head_heykakao h1{padding-top:3px}
+	.head_gnb{height:60px}
+	.list_gnb{padding-top:15px}
+
+	/* footer */
+	.foot_heykakao .inner_foot{padding:18px 90px 0}
+
+	/* slick */
+	.paging_comm{width:100%;padding:0 90px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+}
+
+/* 모바일 (해상도 736px 이하) common */
+@media only screen and (max-width:736px) {
+	#kakaoIndex{visibility:hidden}
+	#kakaoContent{margin:0 auto -50px;padding-bottom:50px}
+	.ico_heykakao,.tit_heykakao,.heykakao_slide .tit_slide:before,.heykakao_slide .tit_slide:after{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m320/img_heykakao_170917.png)}
+	.line_pc,.line_middle{display:inline-block;vertical-align:top}
+	.line_mobile{display:block}
+	.bg_dimmed{opacity:0.7}
+	.txt_mobile{display:inline-block;vertical-align:top} /* 모바일에서만 보이는 텍스트 */
+
+	/* head */
+	.head_heykakao .inner_head{height:50px;padding:0 27px}
+	.head_heykakao h1{padding:7px 0}
+	.link_logo{width:86px;height:27px;padding-top:10px}
+	.link_logo:hover{opacity:1}
+	.link_logo:active{opacity:.5}
+	.link_logo .logo_heykakao{width:76px;height:16px;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m320/logo_gnb.png) no-repeat}
+	.head_heykakao .list_gnb{display:none}
+	.head_heykakao .link_fold{display:block;width:61px;height:30px;margin-right:-20px;padding-top:20px;cursor:pointer}
+	.head_heykakao .link_fold .ico_heykakao{width:21px;height:10px;margin:0 auto;background-position:-90px 0}
+	.head_heykakao .link_fold:active{opacity:.5}
+
+	/* 햄버거 메뉴 */
+	.layer_gnb{position:absolute;top:0;right:0;left:0;padding:0 27px;background:#000}
+	.layer_gnb .ico_layergnb{display:inline-block;width:100px;height:18px;margin:17px 0 14px;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m320/logo_gnb.png) no-repeat;vertical-align:top}
+	.list_menu{position:relative;padding:4px 0 15px}
+	.list_menu li{padding-bottom:7px}
+	.link_menu{display:block;height:43px;font-weight:400;font-size:17px;line-height:43px;color:#fff;opacity:.4}
+	.link_menu:focus,.layer_gnb .on .link_menu{opacity:1}
+	.layer_gnb .link_close{position:absolute;top:0;right:0;width:71px;height:33px;padding-top:17px;cursor:pointer}
+	.layer_gnb .link_close .ico_heykakao{width:17px;height:17px;margin:0 auto;background-position:-220px 0}
+
+	/* footer */
+	.foot_heykakao{height:50px}
+	.foot_heykakao .inner_foot{padding:0 27px}
+	.foot_heykakao .info_copyright{height:50px}
+	.foot_heykakao .link_kakao{width:55px;padding-top:19px}
+	.foot_heykakao .link_kakao:active{opacity:.5}
+	.foot_heykakao .ico_kakao{width:55px;background-position:-150px -80px}
+	.foot_heykakao .link_help{height:50px;margin-left:19px;padding-left:19px;font-size:13px;line-height:50px}
+	.foot_heykakao .link_help:before{top:18px;height:14px}
+	.foot_heykakao .link_help:hover,.foot_heykakao .link_help:active,.foot_heykakao .link_help:focus{opacity:1}
+
+	/* popup 공통 */
+	.inner_heykakao_layer .btn_close{width:37px;height:37px}
+	.inner_heykakao_layer .ico_close{width:16px;height:16px;margin:11px auto 0}
+
+	/* slick */
+	.paging_comm{padding:0 27px}
+	.slick-dots{margin-left:-8px}
+	.slick-dots .btn_paging{padding:8px}
+	.slick-dots .ico_paging{width:9px;height:9px;border-width:1px;font-size:1px;text-indent:0;color:transparent}
+	.slick-active .ico_paging{border-width:1px}
+}
+
+/* home */
+.heykakao_main{height:990px}
+.heykakao_main .main_slide{height:100%}
+.heykakao_main .slick-slide{position:relative}
+.heykakao_main .bg_main{position:absolute;top:0;left:0;right:0;bottom:0;height:100%;background-repeat:no-repeat;background-position:50% 50%;background-size:cover}
+.heykakao_main .bg_main1{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/main_slide1.jpg)}
+.heykakao_main .bg_main2{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/main_slide2.jpg)}
+.heykakao_main .bg_main3{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/main_slide3.jpg)}
+.heykakao_main .inner_main{position:relative;max-width:1180px;margin:0 auto;padding:356px 0 0}
+.heykakao_main .txt_main{display:inline-block;font-weight:300;font-size:27px;line-height:29px;color:#fff;opacity:0.8;vertical-align:top}
+.heykakao_main .tit_main{display:block;padding-top:15px;font-weight:700;font-size:92px;line-height:110px;color:#ffe100}
+.heykakao_main .link_main{display:inline-block;height:35px;margin-top:22px;margin-right:20px;font-size:22px;line-height:24px;color:#fff}
+.heykakao_main .link_main:hover{opacity:.7}
+.heykakao_main .link_main .ico_arrow{display:inline-block;width:10px;height:16px;margin-top:4px;margin-left:10px;background-position:0 -1130px;vertical-align:top}
+.heykakao_main .paging_comm{bottom:47px}
+.lisk_quick{overflow:hidden;max-width:1180px;height:247px;margin:0 auto;padding:0 50px}
+.lisk_quick:after{display:block;clear:both;content:''}
+.lisk_quick li{float:left;width:33.3%;padding-top:73px;padding-left:55px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.lisk_quick li:first-child{padding-left:0}
+.link_quick{display:block}
+.link_quick .tit_quick{display:block;font-weight:400;font-size:26px;line-height:29px;color:#3f404e;white-space:nowrap}
+.link_quick .ico_arrow{display:inline-block;width:12px;height:21px;margin:4px 0 0 15px;background-position:0 -1150px;vertical-align:top}
+.link_quick .desc_quick{padding-top:10px;font-weight:400;font-size:20px;line-height:34px;color:#3f404e;opacity:.9;word-break:keep-all}
+.inner_heykakao_layer2{width:620px;height:575px;margin-top:-310px;margin-left:-288px;padding:0 37px 0 42px;background:#fff;;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.inner_heykakao_layer2 .tit_home{display:block;padding-top:29px;font-weight:400;font-size:40px;line-height:58px}
+.inner_heykakao_layer2 .txt_date{display:block;padding-top:3px;font-size:20px;line-height:34px;color:#000;opacity:0.7}
+.inner_heykakao_layer2 .ico_close{background-position:0 -290px}
+.inner_heykakao_layer2 .info_url{padding-top:45px}
+.inner_heykakao_layer2 .desc_url{font-size:20px;line-height:34px;color:#737373;word-spacing:-2px}
+.inner_heykakao_layer2 .emph_g{color:#0fc9da}
+.inner_heykakao_layer2 .copy_url{position:relative;padding-top:16px}
+.inner_heykakao_layer2 .copy_url:after{display:block;clear:both;content:''}
+.inner_heykakao_layer2 .txt_url{overflow:hidden;float:left;max-width:284px;height:50px;padding:0 19px;font-size:20px;line-height:50px;background-color:#f6f6f6;color:#000;opacity:0.7;text-overflow:ellipsis;white-space:nowrap}
+.inner_heykakao_layer2 .link_url{float:left;width:108px;height:48px;border:1px solid #cbcbcb;font-size:20px;line-height:50px;text-align:center}
+.inner_heykakao_layer2 .link_go{margin-left:-1px}
+.inner_heykakao_layer2 .txt_complete{display:none;position:absolute;bottom:-55px;right:-21px;width:240px;height:50px;font-size:20px;line-height:50px;background-color:#656565;color:#fff;text-align:center}
+.inner_heykakao_layer2 .on .txt_complete{display:block;-moz-animation:fade_inout 3s ease-out 1 forwards;-webkit-animation:fade_inout 3s ease-out 1 forwards;animation:fade_inout 3s ease-out 1 forwards;pointer-events:none}
+.inner_heykakao_layer2 .img_layer{display:block;margin-top:60px}
+@-webkit-keyframes fade_inout{
+	from {opacity:1}
+	90% {opacity:1}
+	to {opacity:0}
+}
+@keyframes fade_inout{
+	from {opacity:1}
+	90% {opacity:1}
+	to {opacity:0}
+}
+
+/* PC (해상도 1680px 이하) */
+@media only screen and (max-width:1680px) {
+	.heykakao_main{height:866px}
+}
+
+/* PC (해상도 1440px 이하) */
+@media only screen and (max-width:1440px) {
+	/* slick */
+	.btn_slide{display:none !important}
+
+	/* home */
+	.heykakao_main{height:780px}
+	.heykakao_main .inner_main{padding:248px 50px 0}
+	.heykakao_main .txt_main{font-size:25px}
+	.heykakao_main .tit_main{font-size:78px;padding-top:9px;line-height:90px}
+	.heykakao_main .link_main{margin-top:16px}
+}
+
+/* PC (해상도 1024px 이하) */
+@media only screen and (max-width:1024px) {
+	/* home */
+	.heykakao_main{height:720px}
+	.heykakao_main .inner_main{padding:240px 90px 0}
+	.heykakao_main .txt_main{font-size:23px;line-height:25px}
+	.heykakao_main .tit_main{padding-top:13px;font-size:62px;line-height:72px}
+	.heykakao_main .link_main{margin-top:18px;font-size:20px;line-height:22px}
+	.lisk_quick{height:inherit;padding:49px 90px 0}
+	.lisk_quick li{width:50%;padding:0 40px 40px 0}
+	.lisk_quick li:nth-child(2n){padding-left:19px}
+	.lisk_quick li:last-child{padding-bottom:45px}
+	.link_quick .desc_quick{font-size:15px;line-height:28px}
+	.inner_heykakao_layer2{width:624px;height:521px;margin-top:-312px;margin-left:-260px;padding:0 40px 0 42px}
+	.inner_heykakao_layer2 .tit_home{padding-top:29px;font-size:32px;line-height:50px}
+	.inner_heykakao_layer2 .info_url{padding-top:25px}
+	.inner_heykakao_layer2 .copy_url{padding-top:17px}
+	.inner_heykakao_layer2 .img_layer{margin-top:41px}
+}
+
+
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	/* home */
+	.heykakao_main{height:505px}
+	.heykakao_main .bg_main1{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/main_slide1.jpg)}
+	.heykakao_main .bg_main2{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/main_slide2.jpg)}
+	.heykakao_main .bg_main3{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/main_slide3.jpg)}
+	.heykakao_main .inner_main{padding:113px 27px 0}
+	.heykakao_main .txt_main{font-size:14px;line-height:16px}
+	.heykakao_main .tit_main{padding-top:11px;font-size:43px;line-height:53px}
+	.heykakao_main .link_main{margin-top:15px;margin-right:14px;font-size:14px;line-height:16px}
+	.heykakao_main .link_main .ico_arrow{width:8px;height:13px;margin-top:4px;margin-left:11px;background-position:-180px -60px}
+	.heykakao_main .paging_comm{bottom:17px;text-align:center}
+	.heykakao_main .slick-dots{display:inline-block;margin-left:0;vertical-align:top}
+	.lisk_quick{padding:38px 27px 0}
+	.lisk_quick li{float:inherit;width:100%;padding:0 0 29px 0}
+	.lisk_quick li:nth-child(2n){padding-left:0}
+	.lisk_quick li:last-child{padding-bottom:35px}
+	.link_quick .tit_quick{font-size:14px;line-height:16px;font-weight:500}
+	.link_quick .ico_arrow{width:7px;height:12px;margin:2px 0 0 7px;background-position:-150px -40px}
+	.link_quick .desc_quick{padding-top:7px;font-weight:200;font-size:14px;line-height:24px;opacity:.8}
+}
+/* product */
+.wrap_product .foot_heykakao{background-color:#666665;opacity:1}
+.inner_product{position:relative;max-width:1280px;margin:0 auto;padding:0 50px;height:100%}
+.product_intro{overflow:hidden;height:780px;background:#687079}
+.product_intro .inner_product{max-width:1180px}
+.product_intro .img_product{position:absolute;bottom:24px;right:-12px}
+.product_intro .tit_intro{position:absolute;top:244px;left:50px;font-weight:300;font-size:36px;line-height:29px;color:#fff}
+.product_intro .logo_kakaomini{display:block;padding-top:55px}
+.product_intro .logo_kakaominimo{display:none}
+.product_intro .link_intro{display:none;padding:31px 0;font-size:22px;line-height:24px;color:#fff;vertical-align:top}
+.product_intro .link_intro:hover,.product_intro .link_intro:active{opacity:.7}
+.product_intro .ico_intro{display:inline-block;width:10px;height:16px;margin-top:4px;margin-left:10px;background-position:0 -1130px;vertical-align:top}
+.product_detail{overflow:hidden;position:relative;height:700px;background:#fff}
+.product_detail .inner_product{display:table;width:100%;box-sizing:border-box}
+.product_detail .img_product{position:absolute;bottom:0}
+.product_detail .info_product{display:table-cell;position:relative;z-index:5;padding:108px 0 0;vertical-align:top}
+.product_detail .tit_product{display:block;position:relative;font-weight:400;font-size:36px;line-height:49px;color:#000;letter-spacing:-0.5px;vertical-align:top}
+.product_detail .desc_product{padding-top:16px;font-weight:200;font-size:20px;line-height:34px;color:#3f404e;opacity:.9;word-break:keep-all}
+.product_detail .txt_only{display:block;width:169px;height:36px;margin:0 0 11px;border-radius:4px;background:#000;text-align:center}
+.product_detail .txt_only2{display:block;width:145px;height:36px;margin:0 0 11px;border:2px solid #000;border-radius:4px;background:#fff;text-align:center}
+.product_detail .list_example{padding-top:41px}
+.product_detail .txt_example{display:inline-block;position:relative;padding:17px 15px 19px;border:2px solid #000;border-radius:4px;font-weight:500;font-size:20px;line-height:23px;background-color:#fff;color:#000;vertical-align:top}
+.product_detail .txt_example:before{position:absolute;top:18px;left:-18px;bottom:0;width:21px;height:18px;background:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/ico_heykakao_170917_v2.png) 0 -690px;content:''}
+.product_detail .txt_example .ico_heykakao{position:absolute;right:-48px;bottom:19px;width:78px;height:78px;background-position:0 -1340px}
+.product_detail .txt_attention{display:block;position:absolute;left:50px;bottom:50px;width:100%;font-size:15px;line-height:22px;color:#686868}
+.product_detail .txt_soldout {width:223px;height:64px;margin:38px 0 0;padding-top:14px;border:3px solid #cc4242;border-radius:4px;background-position:0 -1732px;vertical-align:top;box-sizing:border-box;text-align:center}
+.product_detail .txt_soldout .inner_g {display:inline-block;width:146px;height:29px;background-position:0 -1732px}
+.product_detail .bg_product{position:absolute;top:0;left:0;right:0;bottom:0;height:100%;background-repeat:no-repeat;background-position:50% 100%;background-size:cover}
+.product_detail .ico_onlymini {display:inline-block;width:148px;height:21px;margin:9px auto 0;background-position:0 -230px;vertical-align:top}
+.product_detail .ico_commingsoon {display:inline-block;width:122px;height:20px;margin:9px auto 0;background-position:0 -250px;vertical-align:top}
+.product_kakaomini{background:#58616b}
+.product_kakaomini .tit_product{color:#fff}
+.product_kakaomini .tit_product .emph_g{font-weight:500;color:#ffe100}
+.product_kakaomini .desc_product{color:#fff;opacity:.8}
+.product_kakaomini .img_product{right:50px;bottom:-49px}
+.product_kakaomini .link_play{display:inline-block;margin:39px 0 0 2px;font-weight:500;font-size:20px;line-height:30px;color:#92cdec;vertical-align:top}
+.product_kakaomini .link_play:hover{opacity:.7}
+.product_kakaomini .ico_play{display:inline-block;width:30px;height:30px;margin:2px 10px 0 0 ;background-position:0 -330px;vertical-align:top}
+.product_kakaomini .info_product {padding-top:155px}
+.product_music .img_product{right:4px;bottom:50%;margin-bottom:-240px}
+.product_voice{background:#f9f9f9}
+.product_voice .txt_only{left:635px}
+.product_voice .info_product{text-align:right}
+.product_voice .img_product{left:30px}
+.product_voice .tit_product {padding-left:633px;text-align:left}
+.product_voice .list_example {padding-left:633px;text-align:left}
+.product_voice .txt_example{background-color:#f9f9f9}
+.product_voice .txt_example:before{background-position:0 -710px}
+.product_figure{background-color:#f9f9f9}
+.product_figure .txt_only{left:684px}
+.product_figure .inner_product{max-width:1380px}
+.product_figure .info_product{text-align:right}
+.product_figure .tit_product{padding-left:683px;text-align:left}
+.product_figure .txt_attention{left:734px;bottom:50px;letter-spacing:-0.5px;text-align:left}
+.product_figure .figure_quick{position:relative;z-index:5;padding-left:683px;padding-top:40px;text-align:left}
+.product_figure .btn_figure{display:inline-block;margin-right:19px;vertical-align:top}
+.product_figure .btn_figure .ico_heykakao{display:inline-block;width:60px;height:60px;border-radius:100%;border:4px solid #fdb834;background-image:none;background-color:#fdb834;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;vertical-align:top}
+.product_figure .btn_figure .ico_ryan{border-color:#fdb834;background-color:#fdb834}
+.product_figure .btn_figure:hover .ico_ryan,
+.product_figure .btn_figure.on .ico_ryan{border:4px solid #cc8f20;
+	-webkit-animation-name:aniDotRyan;
+	-webkit-animation-duration:0.5s;
+	-webkit-animation-timing-function:ease-in-out;
+	animation-name:aniDotRyan;
+	animation-duration:0.5s;
+	animation-timing-function:ease-in-out;}
+@-webkit-keyframes aniDotRyan{
+	0% {border-color:#fdb834}
+	100% {border-color:#cc8f20}
+}
+@keyframes aniDotRyan{
+	0% {border-color:#fdb834}
+	100% {border-color:#cc8f20}
+}
+.product_figure .btn_figure .ico_apeach{border-color:#f2c5cb;background-color:#f2c5cb}
+.product_figure .btn_figure:hover .ico_apeach,
+.product_figure .btn_figure.on .ico_apeach{border:4px solid #e0b0af;
+	-webkit-animation-name:aniDotApeach;
+	-webkit-animation-duration:0.5s;
+	-webkit-animation-timing-function:ease-in-out;
+	animation-name:aniDotApeach;
+	animation-duration:0.5s;
+	animation-timing-function:ease-in-out;}
+@-webkit-keyframes aniDotApeach{
+	0% {border-color:#f2c5cb}
+	100% {border-color:#e0b0af}
+}
+@keyframes aniDotApeach{
+	0% {border-color:#f2c5cb}
+	100% {border-color:#e0b0af}
+}
+.product_figure .txt_figure{display:none}
+.product_figure .product_slide{position:absolute;left:60px;width:498px;height:100%}
+.product_figure .slick-track{height:100%}
+.product_figure .slide_pannel{position:relative}
+.product_figure .bg_product{background-size:inherit}
+.product_figure .bg_product1{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_figure1_170917.jpg)}
+.product_figure .bg_product2{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_figure2_170917.jpg)}
+.product_figure .bg_product3{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_figure3_170917.jpg)}
+.product_figure .bg_product4{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_figure4_170917.jpg)}
+.product_figure .bg_product5{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_apeach1.jpg)}
+.product_figure .bg_product6{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_apeach2.jpg)}
+.product_figure .bg_product7{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_apeach3.jpg)}
+.product_figure .bg_product8{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_apeach4.jpg)}
+.product_figure .btn_slide{top:50%;width:50px;height:50px;margin-top:-25px;opacity:.5}
+.product_figure .btn_slide:hover,.product_figure .btn_slide:active{opacity:.7}
+.product_figure .btn_slide .ico_heykakao{width:14px;height:24px}
+.product_figure .btn_prev{left:-50px}
+.product_figure .btn_prev .ico_heykakao{background-position:0 -1560px}
+.product_figure .btn_next{right:-50px}
+.product_figure .btn_next .ico_heykakao{background-position:0 -1590px}
+.product_figure .paging_comm{bottom:47px;z-index:10;width:100%;padding:0;text-align:center;opacity:.7}
+.product_figure .slick-dots .ico_paging{border-color:#303030}
+.product_figure .slick-active .ico_paging{background:#303030}
+.product_figure .slick-dots{display:inline-block;vertical-align:top}
+.product_figure .slick-dots .btn_paging:active .ico_paging,
+.product_figure .slick-dots .btn_paging:hover .ico_paging{background:rgba(48,48,48,0.4)}
+.product_size .img_product{right:-60px;bottom:0}
+.product_size .txt_example{background-color:#fff}
+.product_size .txt_example:before{background-position:0 -690px}
+.product_size .link_more{display:inline-block;margin-top:41px;padding:4px 0 6px;font-weight:500;font-size:20px;line-height:23px;color:#316fe1;vertical-align:top}
+.product_size .link_more:hover{opacity:.7}
+.product_size .link_more .ico_heykakao{display:inline-block;width:9px;height:17px;margin-top:3px;margin-left:8px;background-position:0 -1620px;vertical-align:top}
+.product_buy{background-color:#f6f6f8}
+.product_buy .img_product{right:-118px;bottom:89px}
+.product_buy .link_kakaotalk{display:inline-block;height:64px;margin-top:19px;padding:0 21px 0 23px;border-radius:4px;font-size:20px;line-height:64px;background:#f5d500;letter-spacing:-1px;color:#000;vertical-align:top;text-align:center}
+.product_buy .link_kakaotalk:active,  .product_buy .link_kakaotalk:hover {background-color:#eacc02}
+.product_buy .desc_info_buy {display:inline-block;width:367px;height:138px;margin:19px 0 0 16px;padding:16px 12px 16px 24px;border-radius:4px;font-size:20px;line-height:34px;background-color:#ededed;color:#000;box-sizing:border-box}
+.product_buy .ico_arrow{display:inline-block;width:11px;height:19px;margin:22px 0 0 22px;background-position:0 -1110px;vertical-align:top}
+.product_buy .info_buy{display:block;position:relative;font-size:36px;line-height:56px;color:#f5d500;letter-spacing:-0.5px;vertical-align:top}
+.product_buy .txt_won{display:inline-block;position:relative;color:#bababc;text-decoration:none;vertical-align:top}
+.product_buy .txt_won .line_del{position:absolute;top:50%;left:0;width:100%;height:3px;padding-right:7px;background-color:#bababc}
+.product_buy .txt_won .ico_arrow{position:absolute;top:-25px;right:-10px;width:0;height:0;border-style:solid;border-width:7px 0px 7px 10px;border-color:transparent transparent transparent #f5d500}
+.product_buy .txt_sale{display:inline-block;padding-left:10px;font-weight:600;vertical-align:top}
+.product_visual .product_slide{height:100%}
+.product_visual .slide_pannel{float:left;position:relative}
+.product_visual .paging_comm{bottom:46px;text-align:center}
+.product_visual .slick-dots{display:inline-block;vertical-align:top}
+.product_visual .bg_product1{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_slide1.jpg)}
+.product_visual .bg_product2{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_slide2.jpg)}
+.product_visual .bg_product3{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_slide3.jpg)}
+.product_visual .bg_product4{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_slide4.jpg)}
+.product_visual .bg_product5{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/PC/product_slide5.jpg)}
+.product_app .info_product{float:right;width:549px;margin-top:148px;font-size:0;line-height:0}
+.product_app .img_product{left:55px}
+.product_app .link_app{display:inline-block;width:194px;height:57px;margin:25px 15px 0 0;border:1px solid #50525d;border-radius:10px;background:#fff;vertical-align:top;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;opacity:.8}
+.product_app .link_app:hover{opacity:1}
+.product_app .link_google .ico_heykakao{width:151px;height:28px;margin:13px 0 0 22px;background-position:0 -730px}
+.product_app .link_ios .ico_heykakao{width:137px;height:30px;margin:11px 0 0 22px;background-position:0 -770px}
+.product_app .link_download{display:none}
+.product_spec{overflow:hidden;background:#6c6c6a}
+.product_spec .inner_product{max-width:1180px}
+.product_spec .tit_product{display:inline-block;padding-top:103px;font-weight:500;font-size:32px;line-height:40px;color:#fff;vertical-align:top}
+.product_spec .info_minispec{padding:74px 0 41px;border-bottom:1px solid #898988}
+.product_spec .info_minispec:after{display:block;clear:both;content:''}
+.product_spec .list_spec{float:left;width:47%}
+.product_spec .list_spec:first-child{width:53%}
+.product_spec .list_spec li{position:relative;padding-bottom:32px}
+.product_spec .list_spec .ico_heykakao{position:absolute;top:0;left:0;width:60px}
+.product_spec .list_spec .ico_spec1{height:47px;margin-left:6px;background-position:0 -420px}
+.product_spec .list_spec .ico_spec2{height:44px;margin:2px 0 0 7px;background-position:0 -470px}
+.product_spec .list_spec .ico_spec3{height:44px;margin-left:6px;background-position:0 -520px}
+.product_spec .list_spec .ico_spec4{height:39px;margin-top:5px;background-position:0 -570px}
+.product_spec .info_spec{padding-left:83px}
+.product_spec .tit_spec{font-weight:400;font-size:16px;line-height:19px;color:#fff}
+.product_spec .desc_spec{margin-right:80px;padding-top:5px;font-weight:300;font-size:16px;line-height:27px;color:#d7d7d7;word-break:keep-all}
+.product_spec .info_technical{padding:63px 0 118px}
+.product_spec .info_technical:after{display:block;clear:both;content:''}
+.product_spec .box_technical1{float:left;width:53.5%}
+.product_spec .box_technical2{float:right;width:46.5%}
+.product_spec .list_technical:after{display:block;clear:both;content:''}
+.product_spec .list_technical dt{float:left;padding-right:20px;font-weight:400;font-size:16px;line-height:34px;color:#fff}
+.product_spec .list_technical dd{font-weight:300;font-size:16px;line-height:34px;color:#d7d7d7}
+.product_spec .link_fold{display:none}
+
+/* PC (해상도 1440px 이하) */
+@media only screen and (max-width:1440px) {
+	.product_figure .btn_slide{display:block !important}
+}
+
+/* PC (해상도 1024px 이하) */
+@media only screen and (max-width:1024px) {
+	/* product */
+	.inner_product{padding:0 90px}
+	.product_intro{height:600px}
+	.product_intro .img_product{bottom:17px;right:45px;width:506px}
+	.product_intro .tit_intro{top:187px;left:90px;font-size:22px;line-height:25px}
+	.product_intro .logo_kakaomini{width:568px;padding-top:45px}
+	.product_intro .link_intro{top:187px;left:74px;font-size:17px;line-height:19px}
+	.product_intro .ico_intro{margin-top:3px}
+	.product_detail{height:540px}
+	.product_detail .inner_product{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+	.product_detail .tit_product{font-size:26px;line-height:36px}
+	.product_detail .desc_product{padding-top:8px;font-size:15px;line-height:28px}
+	.product_detail .list_example{padding-top:31px}
+	.product_detail .txt_example{padding:10px 12px 12px;font-size:15px;line-height:17px}
+	.product_detail .txt_attention {left:90px}
+	.product_detail .txt_example:before{top:11px}
+	.product_detail .info_product {padding-top:112px}
+	.product_kakaomini .img_product{right:95px;bottom:0;width:363px}
+	.product_kakaomini .link_play{margin-top:27px;font-weight:400;font-size:15px}
+	.product_kakaomini .info_product{padding-top:113px}
+	.product_music .img_product{right:65px;width:406px;margin-bottom:-176px}
+  	.product_music .tit_product{margin-top:0}
+	.product_voice .img_product{left:81px;width:337px}
+	.product_voice .tit_product {padding-left:419px}
+	.product_voice .txt_only{left:512px}
+	.product_voice .list_example{padding-left:419px}	
+	.product_figure .inner_product{padding:0 63px}
+	.product_figure .txt_attention{left:508px}
+	.product_figure .figure_quick{padding-left:419px}
+	.product_figure .product_slide{left:121px;width:284px}
+	.product_figure .btn_slide{display:block !important;margin-top:29px}
+	.product_figure .bg_product{background-size:100%}
+	.product_figure .txt_only {left:450px}
+	.product_figure .tit_product {padding-left:419px}
+	.product_figure .btn_next {right:-80px}
+	.product_figure .btn_prev {left:-80px}
+	.product_size .img_product{right:15px;bottom:-33px;width:624px}
+	.product_size .tit_product{margin-top:0}
+	.product_size .info_product{margin-right:2px}
+	.product_size .link_more{padding:6px 0;font-weight:500;font-size:15px;line-height:17px}
+	.product_size .link_more .ico_heykakao{margin-top:0}
+	.product_buy .img_product{right:-9px;bottom:69px;width:604px}
+	.product_buy .info_buy {font-size:26px}
+	.product_buy .txt_won .ico_arrow {top:-23px;right:-9px;border-width:6px 0 6px 9px}
+	.product_buy .link_kakaotalk{width:150px;height:46px;padding:0 10px;font-size:15px;line-height:46px}
+	.product_buy .desc_info_buy{width:276px;height:99px;padding:13px 0 13px 17px;font-size:15px;line-height:24px}
+	.product_buy .ico_arrow{margin:14px 0 0 11px}
+	.product_visual .slick-track{height:100%}
+	.product_visual .btn_prev{left:25px}
+	.product_visual .btn_next{right:25px}
+	.product_visual .bg_product{background-size:cover}
+	.product_visual .paging_comm{bottom:23px}
+	.product_app .img_product{left:106px;width:365px}
+	.product_app .info_product{width:438px;margin-top:138px}
+	.product_app .link_app{width:194px;height:57px;margin:16px 15px 0 0}
+	.product_app .link_google .ico_heykakao{margin:14px auto 0}
+	.product_app .link_ios .ico_heykakao{margin:10px auto 0}
+	.product_spec .tit_product{padding:77px 0 0 0;font-weight:500;font-size:28px;line-height:30px}
+	.product_spec .info_spec{padding-left:77px}
+	.product_spec .list_spec{float:inherit;width:100%}
+	.product_spec .list_spec:first-child{width:100%}
+	.product_spec .list_spec li{padding-bottom:28px}
+	.product_spec .list_spec .ico_spec1{margin-left:0}
+	.product_spec .list_spec .ico_spec2{margin-left:1px}
+	.product_spec .list_spec .ico_spec3{margin-left:1px}
+	.product_spec .list_spec .ico_spec4{margin-left:-7px;margin-top:3px}
+	.product_spec .desc_spec{word-spacing:-1px}
+	.product_spec .info_technical{padding:54px 0 83px 0}
+	.product_spec .box_technical1{width:52.7%}
+	.product_spec .box_technical2{width:47.3%}
+	.product_spec .list_technical dt{padding-right:17px}
+	.product_spec .box_technical1 .list_technical dd{padding-right:30px}
+}
+/* 모바일 (해상도 900px 이하) */
+@media only screen and (max-width:900px) {
+ 	.product_detail {height:440px}
+	.product_detail .info_product{padding-top:50px}
+	.product_detail .tit_product{font-size:21px;line-height:33px}
+	.product_voice .tit_product{padding-left:360px}
+	.product_voice .txt_only{left:418px}
+	.product_voice .list_example{padding-left:360px;font-size:20px}
+	.product_size .link_more{margin-top:20px}
+	.product_figure .txt_only{left:418px}
+	.product_figure .tit_product{padding-left:360px}
+	.product_figure .list_example{padding-left:416px}
+	.product_figure .txt_attention{left:425px;width:416px}
+	.product_figure .figure_quick{padding-left:360px}
+	.product_figure .product_slide{left:90px;width:200px}
+	.product_figure .btn_prev{left:-55px}
+	.product_figure .btn_next{right:-55px}
+	.product_intro .img_product{bottom:55px;width:430px}
+	.product_kakaomini .img_product{width:308px}
+	.product_music .img_product{margin-bottom:-148px;width:345px}
+	.product_voice .img_product{width:286px}
+	.product_size .img_product{width:530px}
+	.product_buy .img_product{width:513px}
+}
+
+/* 아이패드 세로 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	.product_detail .txt_example:before{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m320/img_heykakao_170917.png)}
+
+	/* product */
+	.wrap_product .txt_hide{display:none}
+	.inner_product{padding:0 27px}
+	.product_intro{height:555px}
+	.product_intro .img_product{right:50%;bottom:15px;width:305px;margin-right:-141px}
+	.product_intro .tit_intro{top:131px;left:27px;font-weight:400;font-size:15px;line-height:17px}
+	.product_intro .logo_kakaomini{display:none}
+	.product_intro .logo_kakaominimo{display:block;width:218px;margin-top:21px}
+	.product_intro .link_intro{display:block;padding:22px 0;font-size:15px;line-height:17px}
+	.product_intro .ico_intro{width:8px;height:13px;margin-top:3px;margin-left:11px;background-position:-180px -60px}
+	.product_detail{height:inherit}
+	.product_detail:nth-child(odd){background-color:#f9f9f9}
+	.product_detail.product_kakaomini{background:#58616b}
+	.product_detail .inner_product{display:block}
+	.product_detail .info_product{display:block;float:inherit;width:100%;padding-top:50px}
+	.product_detail .tit_product{padding:0;font-size:26px;line-height:34px}
+	.product_detail .desc_product{padding-top:9px;font-size:14px;line-height:24px;word-break:break-all}
+	.product_detail .txt_only{display:block;position:static;width:107px;height:24px;margin-bottom:4px;border-radius:4px;font-weight:500;font-size:12px;line-height:22px}
+	.product_detail .ico_onlymini{width:92px;height:13px;margin:7px 0 0 ;background-position:-120px -180px}
+	.product_detail .txt_only2 {display:block;position:static;width:96px;height:24px;margin-bottom:7px 0 0;border-radius:4px;font-weight:500;font-size:12px;line-height:22px}
+	.product_detail .ico_commingsoon{width:80px;height:14px;margin:5px 0 0;background-position:-80px -200px}
+	.product_detail .list_example{padding:23px 0 0}
+	.product_detail .txt_example{margin-bottom:9px;padding:8px 12px 10px;border-radius:2px;font-size:14px}
+	.product_detail .txt_example:before{top:13px;left:-9px;width:10px;height:9px;background-position:-200px -60px}
+	.product_detail .txt_example .ico_heykakao{right:-21px;bottom:23px;width:39px;height:39px;background-position:-80px -150px}
+	.product_detail .txt_attention{position:static;padding:47px 0 23px;border-radius:2px;font-size:12px;line-height:18px;letter-spacing:-1px}
+	.product_detail .img_product{display:block;position:static;margin:0 auto;padding:40px 0 0}
+	.product_detail .txt_soldout{width:150px;height:39px;margin:23px 0 0 27px;padding:0;border:3px solid #ed253e;vertical-align:top}
+	.product_detail .txt_soldout .inner_g {width:84px;height:17px;margin:8px 0 0;font-size:0;line-height:0;background-position:-80px -220px;vertical-align:top}
+	.product_kakaomini{height:505px}
+	.product_kakaomini .info_product{padding-top:45px}
+	.product_kakaomini .img_product{width:224px;padding-top:75px}
+	.product_kakaomini .link_play{margin-top:29px;font-size:15px;line-height:14px}
+	.product_kakaomini .ico_play{width:15px;height:15px;margin-top:1px;margin-right:8px;background-position:-130px -20px}
+	.product_music .img_product{width:273px;padding-top:28px}
+	.product_music .tit_product{letter-spacing:-1px}
+	.product_music .desc_product{padding-top:9px;letter-spacing:-1px}
+	.product_music .txt_example{background-color:rgba(255,255,255,0.7)}
+	.product_voice .img_product{width:234px;padding-top:14px}
+	.product_voice .desc_product{padding-top:5px}
+	.product_voice .txt_example{background-color:rgba(255,255,255,0.7);letter-spacing:-1px}
+	.product_voice .txt_example:before{background-position:-210px -60px}
+	.product_figure .info_product{width:auto;margin:0;padding:44px 27px 26px}
+	.product_figure .desc_product{padding-top:7px}
+	.product_figure .txt_attention{width:auto;padding:8px 27px 47px}
+	.product_figure .figure_quick{position:relative;padding:16px 0 0}
+	.product_figure .btn_figure{margin-right:12px}
+	.product_figure .btn_figure .ico_heykakao{width:29px;height:29px;margin-top:1px}
+	.product_figure .btn_figure.on .ico_heykakao{width:29px;height:29px;border-width:3px;-webkit-animation:unset;animation:unset}
+	.product_figure .on .txt_figure{opacity:1}
+	.product_figure .product_slide{left:0;width:100%;height:319px}
+	.product_figure .bg_product{background-size:80%;background-position:50% 0}
+	.product_figure .btn_slide{display:none !important}
+	.product_figure .paging_comm{display:block;position:absolute;bottom:90px}
+	.product_figure .inner_product{padding:0 0 275px}
+	.product_figure .txt_attention{position:absolute;left:0;bottom:0;padding-bottom:23px}
+	.product_size .inner_product{padding:0 0 315px}
+	.product_size .info_product{width:auto;padding:50px 27px 0}
+	.product_size .img_product{position:absolute;bottom:10px;right:50%;width:435px;margin-right:-179px}
+	.product_size .desc_product{padding-top:7px}
+	.product_size .link_more{margin-top:13px;padding:3px 0;font-size:14px;line-height:16px}
+	.product_size .link_more .ico_heykakao{width:7px;height:12px;margin-top:3px;margin-left:5px;background-position:-160px -200px}
+	.product_size .txt_attention{position:absolute;bottom:25px;left:0;padding:0 27px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+	.product_buy .info_product{width:100%;padding-top:43px}
+	.product_buy .img_product{position:relative;left:50%;bottom:0;width:387px;margin-left:-183px;padding-top:30px}
+	.product_buy .tit_product{display:block;padding:0 27px 0}
+	.product_buy .desc_product{padding-top:6px}
+	.product_buy .link_kakaotalk{width:127px;height:39px;margin:23px 0 0 27px;padding:0 12px;border-radius:2px;font-size:14px;line-height:39px}
+	.product_buy .ico_arrow{width:8px;height:13px;margin:14px 0 0 9px;background-position:-150px -40px}
+	.product_buy .txt_kakaotalk{display:none}
+	.product_buy .txt_golink{display:inline-block;vertical-align:top}
+	.product_buy .info_buy {padding:2px 27px 0;font-size:24px;line-height:26px}
+	.product_buy .txt_won .line_del {height:2px}
+	.product_buy .txt_won .ico_arrow {top:-18px;right:-7px;border-width:5px 0 5px 7px}
+	.product_buy .layer_dimmed {position:absolute;top:135px;width:100%;height:325px;background-color:#000;opacity:.7}
+	.product_buy .desc_info_buy {overflow:hidden;position:absolute;top:217px;left:50%;width:266px;height:149px;margin-left:-133px;padding:26px 27px;font-size:26px;line-height:34px;letter-spacing:-1}
+	.product_buy .txt_attention {width:auto;padding:47px 27px 23px}
+	.product_buy .inner_product {padding:0}
+	.product_visual{height:374px}
+	.product_visual .bg_product{background-position:50% 50%}
+	.product_visual .paging_comm{bottom:14px}
+	.product_app{height:555px}
+	.product_app .img_product{left:50%;width:235px;margin-left:-93px}
+	.product_app .info_product{margin-top:44px}
+	.product_app .desc_product{letter-spacing:-1px}
+	.product_app .link_app{width:149px;height:41px;margin:22px 0 0 0;border-radius:7px}
+	.product_app .link_google, .product_app .link_ios{display:none}
+	.product_app .link_download{display:inline-block;vertical-align:top}
+	.product_app .link_download .ico_heykakao{width:117px;height:14px;margin:12px auto 0;background-position:0 -90px}
+	.product_spec{height:inherit}
+	.product_spec .tit_product{padding:52px 0 0;font-size:18px;line-height:21px}
+	.product_spec .info_minispec{padding:41px 0 22px}
+	.product_spec .list_spec li{padding-bottom:22px}
+	.product_spec .list_spec .ico_heykakao{width:29px}
+	.product_spec .list_spec .ico_spec1{height:24px;margin-top:3px;background-position:-160px 0}
+	.product_spec .list_spec .ico_spec2{height:22px;margin:7px 0 0 1px;background-position:-190px 0}
+	.product_spec .list_spec .ico_spec3{height:22px;margin:6px 0 0 1px;background-position:-160px -30px}
+	.product_spec .list_spec .ico_spec4{height:29px;margin:4px 0 0 -2px;background-position:-190px -30px}
+	.product_spec .info_spec{padding-left:41px}
+	.product_spec .tit_spec{font-weight:500;font-size:13px;line-height:15px}
+	.product_spec .desc_spec{margin-right:0;padding-top:7px;font-size:13px;line-height:22px;word-break:break-all}
+	.product_spec .info_technical{padding:42px 0 48px}
+	.product_spec .box_technical1,.product_spec .box_technical2{float:inherit;width:100%}
+	.product_spec .list_technical:first-child{width:100%}
+	.product_spec .fold_technical{display:none}
+	.product_spec .fold_on .fold_technical{display:block;padding-left:0}
+	.product_spec .list_technical dt{padding-right:11px;font-size:13px;line-height:29px}
+	.product_spec .list_technical dd{font-size:13px;line-height:29px;word-spacing:-1px}
+	.product_spec .link_fold{display:inline-block;padding:16px 0;font-size:14px;line-height:16px;color:#fff;vertical-align:top}
+	.product_spec .link_fold .ico_heykakao{display:inline-block;width:6px;height:5px;margin:5px 0 0 6px;background-position:-130px -40px;vertical-align:top}
+	.product_spec .fold_on .link_fold{display:none}
+	.product_spec .inner_product{padding:0 27px}
+	.product_spec .box_technical1 .list_technical dd {padding-right:0}
+	
+}
+/* 모바일 (해상도 375px 이하) */
+@media only screen and (max-width:375px) {
+	.product_music .line_mobile{display:inline-block;vertical-align:top}
+}
+
+/* Retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (min-width:737px),
+only screen and (min--moz-device-pixel-ratio:2) and (min-width:737px),
+not all{
+	.product_kakaomini .ico_play{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/RETINA/ico_play.png);-webkit-background-size:cover;background-size:cover;background-position:0 0}
+}
+
+/* 고해상도 이미지 대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (max-width:736px),
+only screen and (min--moz-device-pixel-ratio:2) and (max-width:736px),
+not all{
+	.product_detail .txt_example:before{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/img_heykakao_170917.png);-webkit-background-size:250px 250px;background-size:250px 250px}
+}
+/* feature */
+.wrap_feature #kakaoContent{background-color:#4b505d}
+.heykakao_slide{overflow:hidden;position:relative;height:490px;background-color:#5b5f6a}
+.heykakao_slide .info_slide{position:relative;max-width:1180px;height:100%;margin:0 auto;padding:0 50px}
+.heykakao_slide .tit_slide{display:inline-block;position:relative;margin-left:-3px;padding-top:208px;font-weight:500;font-size:57px;line-height:59px;color:#f6e22d;vertical-align:top;word-break:keep-all}
+.heykakao_slide .desc_slide{padding:16px 0 5px;font-weight:300;font-size:20px;line-height:34px;color:#fff;word-spacing:-1px;word-break:keep-all}
+.heykakao_slide .ico_comming{width:145px;height:36px;background-position:0 -1690px}
+.heykakao_slide .slide_g{display:block;width:228px;margin-top:9px}
+.heykakao_slide .slide_commingsoon{width:145px}
+.heykakao_slide .paging_comm{bottom:26px}
+.list_feature{max-width:1240px;margin:0 auto;padding:5px 20px 25px}
+.list_feature:after{display:block;clear:both;content:''}
+.list_feature li{float:left;position:relative;width:50%;padding:25px 0 24px}
+.list_feature li:after{position:absolute;top:0;left:30px;right:50px;border-top:1px solid #fff;opacity:.1;content:''}
+.list_feature li:nth-child(1):after,.list_feature li:nth-child(2):after{border-top:0}
+.list_feature li:nth-child(2n):after{left:50px;right:30px}
+.link_feature{display:block;min-height:180px;margin:0 50px 0 30px}
+.list_feature li:nth-child(2n) .link_feature{margin:0 30px 0 50px}
+.list_feature li:nth-child(2n) .img_feature{right:10px}
+.link_feature:hover{opacity:.75}
+.link_feature .img_feature{position:absolute;top:24px;right:30px;width:200px}
+.info_feature{width:64.82%;padding-top:41px}
+.info_feature .tit_feature{display:inline-block;position:relative;font-weight:400;font-size:26px;line-height:30px;color:#fff;vertical-align:top}
+.info_feature .tit_feature .emph_circle{position:absolute;top:2px;right:-24px;width:10px;height:10px;border-radius:10px;background-color:#f6e22d}
+.info_feature .emph_text{position:absolute;top:10px;right:-142px;font-size:16px;line-height:18px;color:#f6e22d;vertical-align:top}
+.info_feature .desc_feature{display:-webkit-box;overflow:hidden;max-height:60px;padding-top:7px;font-weight:300;font-size:20px;line-height:32px;word-break:break-all;word-wrap:break-word;color:#dadada;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.open_yet .info_feature .tit_feature,.open_yet .info_feature .desc_feature{opacity:.4}
+.inner_heykakao_layer1{width:880px;height:569px;margin-top:-284px;margin-left:-440px;background:#6a6f7d}
+.inner_heykakao_layer1 .layer_head{float:left;width:387px;height:100%;padding:43px 44px 37px 20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.inner_heykakao_layer1 .img_layer{width:160px}
+.inner_heykakao_layer1 .tit_feature{display:block;padding-top:21px;padding-left:50px;font-weight:400;font-size:36px;line-height:38px;color:#fff}
+.inner_heykakao_layer1 .txt_feature{display:block;overflow:hidden;height:248px;margin-top:11px;padding-left:50px;font-weight:300;font-size:20px;line-height:32px;color:#fff;word-spacing:-1px}
+.inner_heykakao_layer1 .layer_body{overflow:auto;float:left;width:493px;height:495px;margin-top:60px}
+.inner_heykakao_layer1 .layer_body::-webkit-scrollbar-track{background-color:#6a6f7d}
+.inner_heykakao_layer1 .layer_body::-webkit-scrollbar{width:4px;background-color:#6a6f7d}
+.inner_heykakao_layer1 .layer_body::-webkit-scrollbar-thumb{background-color:#888c97}
+.inner_heykakao_layer1 .desc_feature{padding:0px 66px 216px 91px;font-size:20px;line-height:32px;color:#fff}
+.inner_heykakao_layer1 .desc_feature em{display:block;padding-top:30px;font-weight:500}
+.inner_heykakao_layer1 .paging_layer{position:absolute;top:50%;left:0;right:0;font-size:0;letter-spacing:0}
+.inner_heykakao_layer1 .btn_arrow{position:absolute;top:50%;margin-top:-82px;padding:50px 15px}
+.inner_heykakao_layer1 .btn_arrow:hover{opacity:.7}
+.inner_heykakao_layer1 .btn_arrow .ico_heykakao{display:block;width:18px;height:31px}
+.inner_heykakao_layer1 .btn_prev{left:-90px}
+.inner_heykakao_layer1 .btn_prev .ico_heykakao{background-position:0 -1480px}
+.inner_heykakao_layer1 .btn_next{right:-90px}
+.inner_heykakao_layer1 .btn_next .ico_heykakao{background-position:0 -1520px}
+.inner_heykakao_layer1 .btn_close:hover{opacity:.7}
+.inner_heykakao_layer1 .ico_close{background-position:0 -70px}
+
+/* PC (해상도 1024px 이하) */
+@media only screen and (max-width:1024px) {
+  /* feature */
+  .heykakao_slide{height:350px}
+  .heykakao_slide .info_slide{padding:0 90px}
+  .heykakao_slide .tit_slide{padding-top:146px;font-size:40px;line-height:42px}
+  .heykakao_slide .desc_slide{padding-bottom:12px;font-weight:300;font-size:18px;line-height:20px}
+  .heykakao_slide .slide_g{margin-top:13px}
+  .heykakao_slide .slide_commingsoon{width:106px}
+  .heykakao_slide .ico_comming{width:106px;height:26px;background-position:0 -1660px}
+  .heykakao_slide .paging_comm{bottom:20px;padding:0 90px}
+  .list_feature{padding:5px 60px 45px}
+  .list_feature li{padding:9px 0}
+  .link_feature{min-height:171px;margin-right:30px}
+  .list_feature li:after{right:30px}
+  .list_feature li:nth-child(2n):after{left:30px;right:30px}
+  .list_feature li:nth-child(2n) .link_feature{margin-left:30px}
+  .list_feature li:nth-child(2n) .img_feature{right:-1px}
+  .link_feature .img_feature{top:8px;right:-1px;width:191px}
+  .info_feature{padding-top:42px}
+  .info_feature .tit_feature{font-size:22px;line-height:24px}
+  .info_feature .emph_text{margin-left:0}
+  .info_feature .desc_feature{padding-top:10px;font-size:18px;line-height:28px}
+  .inner_heykakao_layer1{width:710px;height:469px;margin-top:-234px;margin-left:-355px}
+  .inner_heykakao_layer1 .layer_head{width:270px;padding:33px 4px 30px 20px}
+  .inner_heykakao_layer1 .layer_body{width:440px;height:411px;margin-top:38px}
+  .inner_heykakao_layer1 .img_layer{width:128px}
+  .inner_heykakao_layer1 .tit_feature{padding-top:30px;padding-left:41px;font-size:30px;line-height:32px}
+  .inner_heykakao_layer1 .txt_feature{height:208px;margin-top:7px;padding-left:41px;font-size:16px;line-height:26px}
+  .inner_heykakao_layer1 .desc_feature{padding:0px 62px 150px 107px;font-size:16px;line-height:26px}
+  .inner_heykakao_layer1 .desc_feature em{padding-top:26px}
+  .inner_heykakao_layer1 .btn_prev{left:-95px}
+  .inner_heykakao_layer1 .btn_next{right:-95px}
+}
+
+/* 모바일 (해상도 900px 이하) */
+@media only screen and (max-width:900px) {
+	.heykakao_slide .tit_slide{padding-top:120px}
+	.heykakao_slide .desc_slide{padding-top:14px;line-height:28px}
+	.heykakao_slide .slide_g{margin-top:8px}
+	.list_feature li:after{left:30px;right:20px}
+	.list_feature li:nth-child(2n):after{left:20px}
+	.link_feature{margin:0 20px 0 30px}
+	.list_feature li:nth-child(2n) .link_feature{margin:0 30px 0 20px}
+	.link_feature .img_feature{top:27px;width:150px}
+	.inner_heykakao_layer1{width:600px;margin-left:-300px}
+	.inner_heykakao_layer1 .layer_head{width:220px}
+	.inner_heykakao_layer1 .layer_body{width:380px}
+	.inner_heykakao_layer1 .btn_prev{left:-75px}
+	.inner_heykakao_layer1 .btn_next{right:-75px}
+}
+/* 모바일 (해상도 737px 이상 891px 이하) */
+@media only screen and (min-width:737px) and (max-width:891px) {
+	.heykakao_slide .desc_slide{padding-bottom:0px}
+}
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	/* feature */
+	.heykakao_slide{height:445px}
+	.heykakao_slide .info_slide{padding:0 27px}
+	.heykakao_slide .tit_slide{padding-top:130px;font-weight:700;font-size:43px;line-height:53px}
+	.heykakao_slide .desc_slide{margin-right:25px;padding:10px 0 5px;font-weight:300;font-size:14px;line-height:22px;word-spacing:0}
+	.heykakao_slide .ico_comming{width:96px;height:24px;background-position:-120px -150px}
+	.heykakao_slide .slide_g{width:142px;margin-top:0}
+	.heykakao_slide .slide_commingsoon{width:96px}
+	.heykakao_slide .paging_comm{bottom:14px;padding:0 27px}
+	.list_feature{padding:6px 0 25px}
+	.list_feature li{float:inherit;width:100%;padding:12px 0 11px}
+	.list_feature li:after{left:27px;right:27px}
+	.list_feature li:nth-child(2):after{border-top:1px solid #fff}
+	.list_feature li:nth-child(2n):after{left:27px;right:27px}
+	.link_feature{display:table;width:100%;min-height:110px;margin:0}
+	.list_feature li:nth-child(2n) .link_feature{margin:0}
+	.list_feature li .link_feature .img_feature{top:24px;right:9px;width:96px}
+	.info_feature{display:table-cell;width:100%;height:110px;padding-top:0;vertical-align:middle}
+	.info_feature .tit_feature{padding-left:27px;font-weight:400;font-size:20px;line-height:22px}
+	.info_feature .emph_text{top:9px;right:-104px;font-size:12px;line-height:14px}
+	.info_feature .tit_feature .emph_circle{right:-8px;width:5px;height:5px;border-radius:5px}
+	.info_feature .desc_feature{width:66%;padding-top:6px;padding-left:27px;font-size:14px;line-height:24px}
+	.wrap_feature .heykakao_layer{position:fixed;top:0;bottom:0;left:0;right:0}
+	.inner_heykakao_layer1{overflow:hidden;width:100%;height:100%;margin:0;background:transparent}
+	.inner_heykakao_layer1 .btn_close{position:fixed;top:49px;right:17px;width:40px;height:40px}
+	.inner_heykakao_layer1 .layer_head{position:absolute;top:98px;left:0;z-index:5;width:100%;height:130px;padding:26px 27px 0;background:#6a6f7d}
+	.inner_heykakao_layer1 .layer_head:after{position:absolute;bottom:0;left:25px;right:25px;height:1px;background:#9a9ca7;content:''}
+	.inner_heykakao_layer1 .img_layer{position:absolute;top:50%;right:17px;width:96px;margin-top:-43px}
+	.inner_heykakao_layer1 .tit_feature{padding-top:0;padding-left:0;font-size:20px;line-height:22px}
+	.inner_heykakao_layer1 .txt_feature{width:67%;height:50px;margin-top:9px;padding-left:0;font-weight:300;font-size:14px;line-height:24px}
+	.inner_heykakao_layer1 .layer_body{float:inherit;position:absolute;top:98px;left:0;right:0;bottom:0;width:100%;height:auto;margin-top:130px;background:#6a6f7d}
+	.inner_heykakao_layer1 .desc_feature{padding:0 27px 70px;font-weight:300;font-size:14px;line-height:24px}
+	.inner_heykakao_layer1 .desc_feature em{display:block;padding-top:19px;color:#e0e0e3}
+	.inner_heykakao_layer1 .desc_feature em:nth-child(1){padding-top:24px}
+	.inner_heykakao_layer1 .paging_layer{position:fixed;top:inherit;bottom:0;right:0;left:0;z-index:5;width:100%;height:45px;font-size:14px;line-height:45px;background:#535866;text-align:center;color:#e0e0e3;opacity:.9}
+	.inner_heykakao_layer1 .btn_arrow{top:inherit;bottom:0;z-index:10;padding:12px}
+	.inner_heykakao_layer1 .btn_arrow .ico_heykakao{width:11px;height:20px}
+	.inner_heykakao_layer1 .btn_prev{left:0}
+	.inner_heykakao_layer1 .btn_prev .ico_heykakao{background-position:-210px -75px}
+	.inner_heykakao_layer1 .btn_next{right:0}
+	.inner_heykakao_layer1 .btn_next .ico_heykakao{background-position:-225px -75px}
+	.inner_heykakao_layer1 .ico_close{width:20px;height:20px;margin:15px auto;background-position:-120px -80px}
+}/* partner */
+.partner_intro{height:490px;background:#62605a}
+.partner_intro .inner_intro{max-width:1180px;height:100%;margin:0 auto;padding:0 50px}
+.partner_intro .desc_intro{padding-top:163px;font-weight:500;font-size:30px;line-height:44px;color:#fff;word-break:keep-all}
+.partner_intro .link_intro{display:inline-block;height:57px;margin-top:33px;padding:0 22px;border-radius:10px;font-weight:500;font-size:20px;line-height:57px;background:#f0d409;color:#3f404e;vertical-align:top}
+.partner_intro .link_intro .ico_arrow{display:inline-block;width:13px;height:20px;margin-top:19px;margin-left:13px;background-position:0 -1460px;vertical-align:top}
+.list_partner{max-width:1180px;margin:1px auto 0}
+.list_partner:after{display:block;clear:both;content:''}
+.list_partner li{float:left;width:25%;height:157px;margin-top:-1px;border:1px solid #f2f2f2;border-width:1px 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.list_partner li:nth-child(even){border-left:1px solid #f2f2f2;border-right:1px solid #f2f2f2}
+.list_partner li:nth-child(4n+1){border-left:1px solid #f2f2f2}
+.list_partner .frame_partner{position:relative;height:100%}
+.list_partner .img_partner{position:absolute;top:0;right:0;left:0;bottom:0;max-width:100%;width:200px;max-height:100%;margin:auto}
+
+/* PC (해상도 1024px 이하) */
+@media only screen and (max-width:1024px) {
+	/* partner */
+	.partner_intro{height:350px}
+	.partner_intro .inner_intro{padding:0 90px}
+	.partner_intro .desc_intro{padding-top:114px;font-size:26px;line-height:36px}
+	.partner_intro .link_intro{height:44px;margin-top:26px;padding:0 17px;font-size:15px;line-height:44px}
+	.partner_intro .link_intro .ico_arrow{margin-top:12px;margin-left:6px}
+	.list_partner{padding:0 90px}
+	.list_partner li{height:117px}
+}
+
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	/* partner */
+	.partner_intro{height:340px}
+	.partner_intro .inner_intro{padding:0 27px}
+	.partner_intro .desc_intro{padding-top:92px;font-size:18px;line-height:28px}
+	.partner_intro .link_intro{height:40px;margin-top:20px;padding:0 15px;border-radius:7px;font-size:14px;line-height:40px}
+	.partner_intro .link_intro .txt_hide{display:none}
+	.partner_intro .link_intro .ico_arrow{width:7px;height:12px;margin-top:14px;margin-left:12px;background-position:-150px -40px}
+	.list_partner{padding:0}
+	.list_partner li{width:50%;height:84px}
+	.list_partner li:nth-child(even){border-right:0}
+	.list_partner li:nth-child(4n+1){border-left:0}
+	.list_partner .img_partner{width:153px}
+}
+/* about */
+.about_intro{position:relative;height:780px;background-color:#686666}
+.about_intro .tit_intro{display:block;max-width:1180px;margin:0 auto;padding:141px 50px 63px;font-weight:500;font-size:27px;line-height:35px;color:#fff}
+.about_intro .img_about{position:absolute;bottom:79px;left:50%;width:1201px;margin-left:-602px}
+.list_about{max-width:1220px;margin:0 auto;padding:93px 30px 92px}
+.list_about:after{display:block;clear:both;content:''}
+.list_about li{float:left;width:50%}
+.list_about .desc_about{margin:0 20px;font-size:20px;line-height:34px;color:#000;word-break:keep-all}
+.about_explan{background:#f9f9f9}
+.list_explan{max-width:1180px;margin:0 auto;padding:101px 50px 90px}
+.list_explan dt{padding-top:57px}
+.list_explan dt:first-child{padding-top:0}
+.list_explan dt img{display:block}
+.list_explan .img_kakaoi{width:134px}
+.list_explan .img_inside{width:136px}
+.list_explan .img_platform{width:136px}
+.list_explan dd{padding-top:14px;font-size:20px;line-height:34px}
+
+/* PC (해상도 1024px 이하) */
+@media only screen and (max-width:1024px) {
+	/* about */
+	.about_intro{height:600px}
+	.about_intro .tit_intro{padding:112px 90px 57px;font-size:27px;line-height:29px}
+	.about_intro .img_about{bottom:61px;width:888px;margin-left:-444px}
+	.list_about{padding:46px 70px}
+	.list_about .desc_about{font-weight:200;font-size:15px;line-height:26px}
+	.list_explan{padding:51px 90px 55px}
+	.list_explan dt{padding-top:67px}
+	.list_explan dd{padding-top:22px;font-weight:200;font-size:15px;line-height:26px}
+}
+
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	/* about */
+	.about_intro{height:257px}
+	.about_intro .img_about{bottom:29px;width:290px;margin-left:-145px}
+	.about_intro .tit_intro{padding:72px 27px 28px;font-size:14px;line-height:16px}
+	.list_about{padding:34px 27px 33px}
+	.list_about li{float:inherit;width:100%}
+	.list_about .desc_about{margin:0;font-size:15px;line-height:26px;word-break:break-all}
+	.list_about li+li .desc_about{padding-top:26px}
+	.list_explan{padding:42px 27px 37px}
+	.list_explan dt{padding-top:37px}
+	.list_explan .img_kakaoi{width:89px}
+	.list_explan .img_inside{width:90px}
+	.list_explan .img_platform{width:90px}
+	.list_explan dd{padding-top:13px;font-weight:400;font-size:14px;line-height:21px;word-break:break-all}
+}/* error */
+.wrap_error{position:absolute;width:100%;height:100%;background:#3e3f3f}
+.wrap_error .inner_g{position:absolute;top:50%;left:0;width:100%;margin-top:-45px;text-align:center}
+.wrap_error .error_heykakao{display:inline-block;text-align:left}
+.wrap_error .wrap_txt{display:inline-block}
+.wrap_error .txt_error{margin-top:12px;font-weight:200;font-size:30px;color:#fff}
+
+/* 모바일 (해상도 736px 이하) */
+@media only screen and (max-width:736px) {
+	/* error */
+	.wrap_error .inner_g{top:22.70%;margin-top:0}
+	.wrap_error .wrap_txt{width:94px;height:20px}
+	.wrap_error .img_error{width:100%;vertical-align:top}
+	.wrap_error .txt_error{margin-top:6px;font-size:15px}
+}
+
+/* Retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (min-width:737px),
+only screen and (min--moz-device-pixel-ratio:2) and (min-width:737px),
+not all{
+	.link_logo .logo_heykakao{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/RETINA/logo_gnb.png);-webkit-background-size:104px 22px;background-size:104px 22px}
+	.foot_heykakao .ico_kakao{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/RETINA/logo_footer_170914.png);-webkit-background-size:59px 12px;background-size:59px 12px;background-position:0 0}
+}
+
+/* 고해상도 이미지 대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.5) and (max-width:736px),
+only screen and (min--moz-device-pixel-ratio:2) and (max-width:736px),
+not all{
+	.ico_heykakao{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/img_heykakao_170917.png);-webkit-background-size:250px 250px;background-size:250px 250px}
+	.link_logo .logo_heykakao,.layer_gnb .ico_layergnb{background-image:url(https://t1.kakaocdn.net/kakao_ai_brandsite/MO/m640/logo_gnb.png);-webkit-background-size:76px 16px;background-size:76px 16px}
+}
