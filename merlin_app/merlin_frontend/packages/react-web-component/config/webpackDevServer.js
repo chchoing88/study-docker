@@ -1,4 +1,3 @@
-//const errorOverlayMiddleware = require('react-error-overlay');
 const noopServiceWorkerMiddleware = require("noop-service-worker-middleware");
 
 module.exports = {
@@ -8,7 +7,10 @@ module.exports = {
   compress: true, // enable gzip compression
   historyApiFallback: true,
   before(app) {
-    //app.use(errorOverlayMiddleware());
     app.use(noopServiceWorkerMiddleware());
+  },
+  overlay: {
+    warnings: true,
+    errors: true
   }
 };
