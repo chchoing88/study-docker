@@ -1,10 +1,11 @@
 import React from "react";
 
-const PageTemplate = ({ header, children }) => {
+const PageTemplate = ({ header, footer, children }) => {
   return (
     <div>
-      <header>{header}</header>
+      {header}
       <main>{children}</main>
+      {footer}
     </div>
   );
 };

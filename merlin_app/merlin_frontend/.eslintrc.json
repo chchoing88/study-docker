@@ -25,7 +25,10 @@
     ],
     "quotes": [
       "error",
-      "double"
+      "double",
+      {
+        "allowTemplateLiterals": true
+      }
     ],
     "prettier/prettier": "error",
     "no-case-declarations": "error"
