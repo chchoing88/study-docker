@@ -22,6 +22,8 @@ module.exports = {
   mode: "development",
   plugins: [],
   resolve: {
-    modules: ["node_modules"]
+    modules: ["node_modules"].concat(
+      process.env.NODE_PATH.split(path.delimiter)
+    )
   }
 };

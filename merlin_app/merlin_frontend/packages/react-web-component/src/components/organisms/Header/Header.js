@@ -1,10 +1,17 @@
 import React from "react";
+import { Input } from "components"
 
-const Header = () => {
+const Header = ({value, onChange, onKeyDown}) => {
   return (
     <header>
       <h1> Merlin's todos </h1>
-      <input placeholder="What needs to be done?" />
+      
+      <Input 
+        value={value} 
+        onChange={onChange}
+        onKeyDown={onKeyDown}
+        placeholder="What needs to be done?"
+      />
     </header>
   );
 };
