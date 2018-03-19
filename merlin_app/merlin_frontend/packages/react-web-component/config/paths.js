@@ -7,5 +7,6 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   appPublic: resolveApp("public"),
-  appBuild: resolveApp("build")
+  appBuild: resolveApp("build"),
+  globalStyles: resolveApp("src/styles")
 };
