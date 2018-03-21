@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from "react";
 import { TodoPage } from "../components";
 import { BrowserRouter, Route } from "react-router-dom";

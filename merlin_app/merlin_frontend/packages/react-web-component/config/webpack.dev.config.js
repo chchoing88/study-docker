@@ -2,7 +2,7 @@ const path = require("path");
 const paths = require("./paths");
 
 module.exports = {
-  entry: ["./src/index.js"],
+  entry: ["./src/index.jsx"],
   output: {
     path: paths.appPublic,
     filename: "bundle.js"
@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -46,6 +46,7 @@ module.exports = {
   resolve: {
     modules: ["node_modules"].concat(
       process.env.NODE_PATH.split(path.delimiter)
-    )
+    ),
+    extensions: [".js", ".jsx", ".css"]
   }
 };

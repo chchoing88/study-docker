@@ -6,6 +6,9 @@
 
 - webpack 4.0
 - react 16.02
+- flow
+
+React preset에는 이미 flow preset이 포함되어 있다.
 
 ## STURUCTURE
 

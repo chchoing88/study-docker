@@ -1,7 +1,7 @@
 // https://github.com/diegohaz/arc/wiki/Atomic-Design#do-not-worry
-const req = require.context(".", true, /\.\/[^/]+\/[^/]+\/index\.js$/);
+const req = require.context(".", true, /\.\/[^/]+\/[^/]+\/index\.jsx$/);
 
 req.keys().forEach(key => {
-  const componentName = key.replace(/^.+\/([^/]+)\/index\.js/, "$1");
+  const componentName = key.replace(/^.+\/([^/]+)\/index\.jsx/, "$1");
   module.exports[componentName] = req(key).default;
 });
