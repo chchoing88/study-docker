@@ -12,12 +12,6 @@ type Props = {
   onKeyDown: number
 };
 
-function square(n: number): number {
-  return n * n;
-}
-
-square("2"); // Error!
-
 const Header = ({ value, onChange, onKeyDown }: Props) => {
   return (
     <header className={cx("header")}>

@@ -3,12 +3,11 @@
 [include]
 
 [libs]
-interfaces/
 
 [lints]
 
 [options]
-module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(css\|scss\|less\)$' -> 'StyleSheetStub'
-
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/interfaces/StyleSheetStub'
+module.name_mapper='^\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 [strict]

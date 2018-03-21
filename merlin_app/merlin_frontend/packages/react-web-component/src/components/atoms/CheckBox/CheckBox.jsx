@@ -3,12 +3,17 @@
 import React from "react";
 
 type Props = {
+  isDone: Boolean,
   onChange: Function
 };
 
 const CheckBox = (props: Props) => (
   <div>
-    <input type="checkbox" onChange={props.onChange} />
+    <input
+      className={props.isDone ? "isDone" : "noDone"}
+      type="checkbox"
+      onChange={props.onChange}
+    />
   </div>
 );
 

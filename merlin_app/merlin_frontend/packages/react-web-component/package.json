@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_PATH=src HOST=nodeapp.local node scripts/start.js",
     "build": "NODE_PATH=src node scripts/build.js",
-    "flow": "flow"
+    "flow": "flow",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setupTests.js"
   },
   "repository": {
     "type": "git",
@@ -18,16 +22,19 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
+    "babel-jest": "^23.0.0-alpha.0",
     "babel-loader": "^7.1.3",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "chalk": "^2.3.2",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "flow-bin": "^0.68.0",
     "fs-extra": "^5.0.0",
+    "jest": "^22.4.2",
     "node-sass": "^4.7.2",
     "noop-service-worker-middleware": "^1.0.0",
     "open": "0.0.5",

@@ -1,9 +1,9 @@
 // @flow
 
 import React from "react";
-import { CheckBox, Label, Button } from "../../../components";
+import { CheckBox, Label, Button } from "components";
 import classnames from "classnames/bind";
-import style from "";
+import style from "./TodoItem.scss";
 
 const cx = classnames.bind(style);
 
@@ -22,7 +22,7 @@ type Props = {
 const TodoItem = ({ todo, onChange, onMouseOver }: Props) => {
   return (
     <li className={cx("todo_item")} onMouseOver={onMouseOver}>
-      <CheckBox onChange={e => onChange(e, todo.id)} />
+      <CheckBox isActive={todo.isDone} onChange={e => onChange(e, todo.id)} />
       <Label>{todo.name}</Label>
       <Button className={cx("btn_del")} />
     </li>
