@@ -28,7 +28,7 @@ const devServerOptions = Object.assign({}, webpackDevConfig, {
     colors: true
   }
 });
-webpackConfig.entry.unshift("webpack-dev-server/client?http://localhost:3001/");
+
 webpackConfig.plugins.push(new Webpack.HotModuleReplacementPlugin());
 webpackConfig.plugins.push(new Webpack.NamedModulesPlugin());
 

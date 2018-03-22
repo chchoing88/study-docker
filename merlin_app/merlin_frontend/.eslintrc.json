@@ -1,11 +1,13 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es6": true,
     "node": true
   },
   "extends": [
-    "prettier"
+    "prettier",
+    "plugin:flowtype/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -16,7 +18,8 @@
   },
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "flowtype"
   ],
   "rules": {
     "linebreak-style": [
@@ -25,7 +28,10 @@
     ],
     "quotes": [
       "error",
-      "double"
+      "double",
+      {
+        "allowTemplateLiterals": true
+      }
     ],
     "prettier/prettier": "error",
     "no-case-declarations": "error"
