@@ -2,7 +2,7 @@ import express from 'express';
 
 const app = express();
 
-let port = 4001;
+let port = process.env.PORT || 4001;
 
 
 // 경로 '/' 로 들어오는 요청들은 public 폴더로 정적 라우팅합니다.
