@@ -1,4 +1,4 @@
-#src/Components
+# src/Components
 
 앱에 글로벌하게 쓸 라이브러리 구현체를 모아 놓은 디렉토리이다.
 
