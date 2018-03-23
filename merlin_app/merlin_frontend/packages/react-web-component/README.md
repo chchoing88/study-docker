@@ -8,8 +8,8 @@
 - webpack 4.0
 - react 16.02
 - flow 0.68 ( typecheck )
-- jest 22.3
-- enzyme 3.3.0
+- jest 22.3 ( test framework )
+- enzyme 3.3.0 ( test library )
 
 React preset에는 이미 flow preset이 포함되어 있다.
 

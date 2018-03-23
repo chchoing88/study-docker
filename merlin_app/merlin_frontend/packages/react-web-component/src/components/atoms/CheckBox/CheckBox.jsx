@@ -3,14 +3,15 @@
 import React from "react";
 
 type Props = {
-  isDone: Boolean,
+  isActive: Boolean,
   onChange: Function
 };
 
 const CheckBox = (props: Props) => (
   <div>
     <input
-      className={props.isDone ? "isDone" : "noDone"}
+      // className={props.isActive ? "isDone" : "noDone"}
+      // className="isDone"
       type="checkbox"
       onChange={props.onChange}
     />

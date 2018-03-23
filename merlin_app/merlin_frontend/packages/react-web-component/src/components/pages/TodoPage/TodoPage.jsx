@@ -14,7 +14,7 @@ export default class TodoPage extends Component {
         {
           id: uuidv1(),
           name: "abcd",
-          isDone: false
+          isDone: true
         }
       ]
     };
