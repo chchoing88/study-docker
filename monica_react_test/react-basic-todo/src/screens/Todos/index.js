@@ -16,6 +16,7 @@ class App extends Component {
     this.changeData = this.changeData.bind(this)
     this.changeTodo = this.changeTodo.bind(this)
     this.removeTodo = this.removeTodo.bind(this)
+    // https://www.zerocho.com/category/React/post/578232e7a479306028f43393
   }
 
   componentDidMount () {
