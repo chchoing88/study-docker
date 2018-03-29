@@ -1,16 +1,101 @@
 .todo_item{
+  .inp_confirm{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    // 기본
+    & + .lab_todo{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      padding-left: 30px;
+      line-height:24px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      &:before{
+        content: ' ';
+        text-align: center;
+        vertical-align: middle;
+        background: #fafafa;
+        border: 1px solid #cacece;
+        border-radius: 3px;
+        display: inline-block;
+        width: 21px;  /* 체크박스의 너비를 지정 */
+        height: 21px;  /* 체크박스의 높이를 지정 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        opacity: .6;
+        box-shadow: none;
+        border-color: #6cc0e5;
+        -webkit-transition: all .12s, border-color .08s;
+        transition: all .12s, border-color .08s;
+        
+      }
+      
+    }
+    
+  }
+}
+
+.todo_item{
+  .inp_confirm:checked{
+    & + .lab_todo{
+      &:before{
+        color: #99a1a7;
+        text-shadow: 1px 1px #fff;
+        background: #e9ecee;
+        border-color: #adb8c0;
+        position: absolute;
+        width: 10px;
+        top: -5px;
+        left: 5px;
+        border-radius: 0;
+        opacity:1; 
+        background: transparent;
+        border-color:transparent #6cc0e5 #6cc0e5 transparent;
+        border-top-color:transparent;
+        border-left-color:transparent;
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+      }
+      &.lab_done{
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    }
+    
+  }
+}
+
+
+
+.todo_item{
   position: relative;
   padding: 16px 16px 16px 0;
   border-bottom:1px solid #ededed;
   .btn_del{
     position: absolute;
+    top:13px;
     right:16px;
     width:30px;
     height:30px;
     text-align: center;
-    
-    &:after{
-      content:'x'
+
+  }
+  &:hover{
+    .btn_del{
+      &:after{
+        content:'x'
+      }
     }
   }
 }

@@ -5,10 +5,15 @@ import style from "./TodoList.scss";
 
 const cx = classNames.bind(style);
 
-const TodoList = ({ todoLists, onChange, onMouseOver }) => {
+const TodoList = ({ todoLists, onChange, onMouseOver, onDelete }) => {
   const list = todoLists;
   const todoItems = list.map(todo => (
-    <TodoItem key={todo.id} todo={todo} onChange={onChange} />
+    <TodoItem
+      key={todo.id}
+      todo={todo}
+      onChange={onChange}
+      onDelete={onDelete}
+    />
   ));
 
   return <ul className={cx("list_todo")}>{todoItems}</ul>;

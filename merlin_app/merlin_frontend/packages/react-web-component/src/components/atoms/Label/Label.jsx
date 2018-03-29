@@ -1,7 +1,19 @@
+// @flow
+
 import React from "react";
 
-const Label = ({ children }) => {
-  return <label>{children}</label>;
+type Props = {
+  forValue: String,
+  className: String,
+  children: any
+};
+
+const Label = ({ forValue, className, children }: Props) => {
+  return (
+    <label for={forValue} className={className}>
+      {children}
+    </label>
+  );
 };
 
 export default Label;

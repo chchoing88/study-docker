@@ -2,20 +2,22 @@
 
 import React from "react";
 
-type Props = {
+type CheckBoxProps = {
+  id: String,
   isActive: Boolean,
-  onChange: Function
+  name: String,
+  className: String,
+  onHandleChange: Function
 };
 
-const CheckBox = (props: Props) => (
-  <div>
-    <input
-      // className={props.isActive ? "isDone" : "noDone"}
-      // className="isDone"
-      type="checkbox"
-      onChange={props.onChange}
-    />
-  </div>
+const CheckBox = (props: CheckBoxProps) => (
+  <input
+    id={props.id}
+    className={props.className}
+    type="checkbox"
+    name={props.name}
+    onChange={props.onHandleChange}
+  />
 );
 
 export default CheckBox;
