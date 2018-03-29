@@ -7,6 +7,7 @@ class TodoItem extends Component {
     this.change = this.change.bind(this)
   }
 
+
   remove () {
     this.props.removeTodo(this.props.todo)
   }
