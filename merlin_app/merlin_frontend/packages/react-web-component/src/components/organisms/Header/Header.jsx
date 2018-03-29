@@ -9,10 +9,10 @@ const cx = classNames.bind(style);
 type Props = {
   value: string,
   onChange: Function,
-  onKeyDown: number
+  onInsert: Function
 };
 
-const Header = ({ value, onChange, onKeyDown }: Props) => {
+const Header = ({ value, onChange, onInsert }: Props) => {
   return (
     <header className={cx("header")}>
       <h1>
@@ -22,7 +22,7 @@ const Header = ({ value, onChange, onKeyDown }: Props) => {
       <InputText
         value={value}
         onChange={onChange}
-        onKeyDown={onKeyDown}
+        onInsert={onInsert}
         placeholder="What needs to be done?"
       />
     </header>

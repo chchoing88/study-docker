@@ -14,7 +14,7 @@ export default class TodoPage extends Component {
         {
           id: uuidv1(),
           name: "abcd",
-          isDone: true
+          isDone: false
         }
       ]
     };
@@ -22,10 +22,11 @@ export default class TodoPage extends Component {
     this.handleInsert = this.handleInsert.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleCheck = this.handleCheck.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
-
-  handleInsert(e) {
-    if (e.keyCode !== KEY_ENTER) {
+  // 할일 삽입
+  handleInsert(keycode) {
+    if (keycode !== KEY_ENTER) {
       return false;
     }
 
@@ -48,13 +49,13 @@ export default class TodoPage extends Component {
     );
   }
 
-  handleChange(e) {
+  handleChange(value) {
     console.log("change Input");
     this.setState({
-      keyword: e.target.value
+      keyword: value
     });
   }
-
+  // 할일 끝냄
   handleCheck(e, id) {
     console.log("check");
     // 찾아서 update..
@@ -71,7 +72,17 @@ export default class TodoPage extends Component {
     });
   }
 
-  handleHover() {}
+  handleDelete(id) {
+    console.log("delete");
+    // 찾아서 delete
+
+    const newTodoList = this.state.todoLists.filter(todo => {
+      return todo.id !== id;
+    });
+    this.setState({
+      todoLists: newTodoList
+    });
+  }
 
   render() {
     return (
@@ -80,7 +91,7 @@ export default class TodoPage extends Component {
           <Header
             value={this.state.keyword}
             onChange={this.handleChange}
-            onKeyDown={this.handleInsert}
+            onInsert={this.handleInsert}
           />
         }
       >
@@ -88,6 +99,7 @@ export default class TodoPage extends Component {
           todoLists={this.state.todoLists}
           onChange={this.handleCheck}
           onMouseOver={this.handleHover}
+          onDelete={this.handleDelete}
         />
       </PageTemplate>
     );

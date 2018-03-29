@@ -1,9 +1,14 @@
 import React from "react";
 
-const InputText = ({ ...rest }) => {
+const InputText = ({ onChange, onInsert, ...rest }) => {
   return (
     <div>
-      <input type="text" placeholder="" {...rest} />
+      <input
+        type="text"
+        onChange={e => onChange(e.target.value)}
+        onKeyDown={e => onInsert(e.keyCode)}
+        {...rest}
+      />
     </div>
   );
 };
