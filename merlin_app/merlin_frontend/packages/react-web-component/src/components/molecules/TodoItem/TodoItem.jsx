@@ -10,17 +10,22 @@ const cx = classnames.bind(style);
 type Todo = {
   id: string,
   name: string,
-  isDone: Boolean
+  isDone: boolean
 };
 
-type Props = {
-  todo: Todo,
-  onChange: Function,
-  onMouseOver: Function,
-  onDelete: Function
-};
+interface TodoItemInterface<TodoType> {
+  todo: TodoType;
+  onChange: Function;
+  onMouseOver: Function;
+  onDelete: Function;
+}
 
-const TodoItem = ({ todo, onChange, onMouseOver, onDelete }: Props) => {
+const TodoItem = ({
+  todo,
+  onChange,
+  onMouseOver,
+  onDelete
+}: TodoItemInterface<Todo>) => {
   return (
     <li className={cx("todo_item")} onMouseOver={onMouseOver}>
       <CheckBox

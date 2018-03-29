@@ -2,7 +2,7 @@
 
 import React from "react";
 
-type Props = {
+type CheckBoxProps = {
   id: String,
   isActive: Boolean,
   name: String,
@@ -10,7 +10,7 @@ type Props = {
   onHandleChange: Function
 };
 
-const CheckBox = (props: Props) => (
+const CheckBox = (props: CheckBoxProps) => (
   <input
     id={props.id}
     className={props.className}

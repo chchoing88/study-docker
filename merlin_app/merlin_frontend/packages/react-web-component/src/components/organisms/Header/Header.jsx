@@ -3,7 +3,7 @@
 import React from "react";
 import style from "./Header.scss";
 import classNames from "classnames/bind";
-import { InputText } from "components";
+import { InputText, CheckBox } from "components";
 const cx = classNames.bind(style);
 
 type Props = {
@@ -18,7 +18,7 @@ const Header = ({ value, onChange, onInsert }: Props) => {
       <h1>
         <span>Merlin's todos </span>
       </h1>
-
+      <CheckBox />
       <InputText
         value={value}
         onChange={onChange}
