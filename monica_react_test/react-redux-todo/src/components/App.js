@@ -63,38 +63,39 @@ const mapDispatchToProps = (dispatch) => {
 }
 // ------- smart component -----------
 class FilterList extends Component {
-
-  constructor() {
-    super();
-    //our default state, filter by nothing
-    this.state = {
-      filterBy: ''
-    };
-  }
-  updateFilter(ev) {
-    this.setState({filterBy: ev.target.value});
-  }
+  //
+  // constructor() {
+  //   super();
+  //   //our default state, filter by nothing
+  //   this.state = {
+  //     filterBy: ''
+  //   };
+  // }
+  // updateFilter(ev) {
+  //   this.setState({filterBy: ev.target.value});
+  // }
+  //
+  // render() {
+  //   const {filterBy} = this.state;
+  //   const frameworks = ['React', 'Angular', 'Vue', 'Ember'];
+  //   // simple input box and our List component
+  //   return (
+  //     <div>
+  //       <input type="text" onChange={(ev) => this.updateFilter(ev) }/>
+  //       <List items={frameworks} filterBy={filterBy}/>
+  //     </div>
+  //   )
+  // }
 
   render() {
-    const {filterBy} = this.state;
-    const frameworks = ['React', 'Angular', 'Vue', 'Ember'];
-    // simple input box and our List component
+    const {filterBy, updateFilter} = this.props;
     return (
       <div>
-        <input type="text" onChange={(ev) => this.updateFilter(ev) }/>
-        <List items={frameworks} filterBy={filterBy}/>
+        <input type="text" onChange={updateFilter}/>
+        <List items={FRAMEWORKS} filterBy={filterBy}/>
       </div>
     )
   }
-
-  // render() {
-  //   const {filterBy, updateFilter} = this.props;
-  //   return (
-  //     <div>
-  //       <input type="text" onChange={updateFilter}/>
-  //       <List items={FRAMEWORKS} filterBy={filterBy}/>
-  //     </div>
-  //   )
 }
 
 // very important!
