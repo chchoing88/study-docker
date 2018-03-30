@@ -7,7 +7,7 @@ type CheckBoxProps = {
   isActive: Boolean,
   name: String,
   className: String,
-  onHandleChange: Function
+  onHandleChange: (e: SyntheticEvent<HTMLInputElement>) => mixed
 };
 
 const CheckBox = (props: CheckBoxProps) => (

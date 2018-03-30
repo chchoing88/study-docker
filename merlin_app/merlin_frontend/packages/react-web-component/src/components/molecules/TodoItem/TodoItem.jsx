@@ -15,14 +15,14 @@ type Todo = {
 
 interface TodoItemInterface<TodoType> {
   todo: TodoType;
-  onChange: Function;
+  onCheckBoxChange: Function;
   onMouseOver: Function;
   onDelete: Function;
 }
 
 const TodoItem = ({
   todo,
-  onChange,
+  onCheckBoxChange,
   onMouseOver,
   onDelete
 }: TodoItemInterface<Todo>) => {
@@ -32,7 +32,7 @@ const TodoItem = ({
         className={cx("inp_confirm")}
         id={todo.id}
         isActive={todo.isDone}
-        onHandleChange={e => onChange(e, todo.id)}
+        onHandleChange={e => onCheckBoxChange(e, todo.id)}
       />
       <Label
         forValue={todo.id}
