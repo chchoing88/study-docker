@@ -55,3 +55,7 @@ $ npm build
 ## Customize dev env setting
 
 - dev 환경시 scripts/start.js 에서 수정 && 경로는 config/paths.js 에서 수정 ( 주의, 그 외에는 건들지 않도록 한다.)
+
+## 단점
+
+- flow 를 사용하면 마우스를 가져다 대면 자동으로 어떤 타입인지 보여주지만.. 음.. atomic 구조에서 index.js를 이용해 import를 시키다 보니..타입이 제대로 안나온다..음....

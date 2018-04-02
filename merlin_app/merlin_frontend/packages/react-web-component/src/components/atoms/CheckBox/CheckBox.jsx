@@ -1,13 +1,14 @@
 // @flow
 
 import React from "react";
+import type { targetHandler } from "../../../types"
 
 type CheckBoxProps = {
-  id: String,
-  isActive: Boolean,
-  name: String,
-  className: String,
-  onHandleChange: (e: SyntheticEvent<HTMLInputElement>) => mixed
+  id: string,
+  isActive: boolean,
+  name: string,
+  className: string,
+  onHandleChange: targetHandler
 };
 
 const CheckBox = (props: CheckBoxProps) => (
