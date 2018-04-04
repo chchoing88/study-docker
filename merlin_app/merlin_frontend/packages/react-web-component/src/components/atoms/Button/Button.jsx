@@ -2,7 +2,7 @@
 
 import React from "react";
 import classnames from "classnames/bind";
-import type { targetHandler } from "../../../types"
+import type { targetHandler } from "../../../types";
 
 type ButtonProps = {
   onClick: targetHandler,
@@ -14,6 +14,3 @@ const Button = ({ onClick, ...rest }: ButtonProps) => {
 };
 
 export default Button;
-
-
-

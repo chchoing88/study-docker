@@ -1,7 +1,7 @@
 // @flow
 
 import React from "react";
-import type { targetHandler } from "../../../types"
+import type { targetHandler } from "../../../types";
 
 type CheckBoxProps = {
   id: string,
